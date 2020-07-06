@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 10:24:31
- * @LastEditTime: 2020-07-06 15:37:17
+ * @LastEditTime: 2020-07-06 16:32:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/Home.vue
@@ -26,6 +26,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang='sass' scoped>
 
 </style>

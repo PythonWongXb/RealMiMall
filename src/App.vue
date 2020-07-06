@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 10:24:31
- * @LastEditTime: 2020-07-06 14:49:37
- * @LastEditors: your name
+ * @LastEditTime: 2020-07-06 16:33:00
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/App.vue
 -->
@@ -12,6 +12,6 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang='sass' scoped>
 
 </style>
