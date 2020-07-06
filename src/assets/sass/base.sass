@@ -1,0 +1,55 @@
+@import './config.sass'
+
+.container
+  width: 1126px
+  margin: 0 auto
+
+a
+  color: $colorL
+  text-decoration: none
+  img
+    height: 100%
+    width: 100%
+
+i
+  font-family: "iconfont" !important
+  font-size: 16px
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+
+input
+  outline: none
+  box-sizing: border-box
+  font-size: 14px
+
+// 公共的logo
+.header-logo
+  display: inline-block
+  width: 55px
+  height: 55px
+  background-color: #ff6700
+  overflow: hidden
+
+  a
+    display: inline-block
+    width: 110px
+    height: 55px
+
+    &:before
+      content: ''
+      @include bgImg(55px,55px,'https://s02.mifile.cn/assets/static/image/mi-logo.png')
+      transition: all 0.2s
+    &:after
+      content: ''
+      @include bgImg(55px,55px,'https://s02.mifile.cn/assets/static/image/mi-home.png')
+      transition: all 0.2s
+    &:hover:before
+      margin-left: -55px
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
