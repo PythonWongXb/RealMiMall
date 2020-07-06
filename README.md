@@ -1,24 +1,13 @@
+<!--
+ * @Author: Pythonista Wong
+ * @Date: 2020-07-06 10:24:45
+ * @LastEditTime: 2020-07-06 10:27:54
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /realmimall/README.md
+-->
 # realmimall
 
-## Project setup
-```
-npm install
-```
+## this is a real project of copying MiMall
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## thans for your forks and star.
