@@ -1,0 +1,44 @@
+.container {
+  width: 1126px;
+  margin: 0 auto;
+}
+
+a img {
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+}
+
+.header-logo {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: #ff6700;
+  overflow: hidden;
+}
+
+.header-logo a {
+  display: inline-block;
+  width: 110px;
+  height: 55px;
+}
+
+.header-logo a:before {
+  content: '';
+}
+
+.header-logo a:after {
+  content: "";
+  content-transition: all 0.2s;
+}
+
+.header-logo a:hover:before {
+  margin-left: -55px;
+}
+/*# sourceMappingURL=base.css.map */
