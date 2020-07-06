@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-06 21:13:26
+ * @LastEditTime: 2020-07-06 21:46:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -50,7 +50,7 @@
       <div class="right-part">
         <a v-if="!username" href="javascript:;">登录</a>
         <user-index v-if="username"></user-index>
-        <a href="javascript:;">注册</a>
+        <a v-if="!username" href="javascript:;">注册</a>
         <a href="javascript:;">消息通知</a>
         <a class="cart-box" href="javascript:;">
           <div class="cart">
@@ -76,7 +76,7 @@ export default {
     return {
       // vuex
       username: 'Ppythonista',
-      carcount: 0
+      cartcount: 0
     }
   },
   components: {

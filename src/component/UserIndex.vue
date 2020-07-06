@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:38:38
- * @LastEditTime: 2020-07-06 21:13:03
+ * @LastEditTime: 2020-07-06 21:21:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/UserIndex.vue
@@ -85,6 +85,7 @@ export default {
         height:30px
         width: 100%
         line-height: 30px
+        color: $colorM
         &:hover
           color: $colorA
           background-color:$colorN
