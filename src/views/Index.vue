@@ -1,20 +1,18 @@
 <!--
  * @Author: your name
- * @Date: 2020-07-06 10:24:31
- * @LastEditTime: 2020-07-06 15:13:21
+ * @Date: 2020-07-06 11:53:27
+ * @LastEditTime: 2020-07-06 11:54:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /realmimall/src/views/Home.vue
+ * @FilePath: /realmimall/src/views/index.vue
 -->
 <template>
-  <div>Home
-    <router-view></router-view>
-  </div>
+  <div>index</div>
 </template>
 
 <script>
 export default {
-  name: 'home'
+  name: 'index'
 }
 </script>
 
