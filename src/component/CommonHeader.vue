@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:28:32
- * @LastEditTime: 2020-07-07 11:04:01
+ * @LastEditTime: 2020-07-07 18:10:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/Header.vue
@@ -153,6 +153,7 @@ export default {
             width: 100%
             left: 0
             top: 140px
+            z-index: 11
             @include shadow()
             @include flex()
             .container

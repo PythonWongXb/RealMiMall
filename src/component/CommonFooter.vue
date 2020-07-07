@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 10:38:41
- * @LastEditTime: 2020-07-07 11:13:34
+ * @LastEditTime: 2020-07-07 14:50:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mimall/src/components/NavFooter.vue
