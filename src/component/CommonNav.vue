@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-06 21:46:16
+ * @LastEditTime: 2020-07-07 11:16:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -127,6 +127,7 @@ export default {
           i
             margin-right: 5px
         .all-order
+          background: $colorG
           color: $colorL
           position: absolute
           height: 0px
@@ -137,4 +138,5 @@ export default {
           overflow: hidden
           transition: height .5s
           @include shadow()
+          z-index: 1
 </style>

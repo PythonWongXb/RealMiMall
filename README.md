@@ -1,7 +1,7 @@
 <!--
  * @Author: Pythonista Wong
  * @Date: 2020-07-06 10:24:45
- * @LastEditTime: 2020-07-06 11:41:47
+ * @LastEditTime: 2020-07-07 11:17:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/README.md
@@ -15,13 +15,13 @@
 # z-index
 
 ## 首页
-1. 名称下拉菜单 9
-2. 全部商品分类 9
+1. 名称下拉菜单 1
+2. 全部商品分类 1
 3.
 
 ## 遮罩层组件
 
-99
+
 
 
 # 父类公共组件
