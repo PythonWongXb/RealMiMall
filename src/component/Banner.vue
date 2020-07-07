@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-07 17:27:10
- * @LastEditTime: 2020-07-07 18:06:15
+ * @LastEditTime: 2020-07-07 20:09:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/Banner.vue
@@ -40,6 +40,7 @@ export default {
 
 .banner
   margin-top: 14px
+  margin-bottom: 26px
   height: 170px
   width: 100%
   .container

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:53:27
- * @LastEditTime: 2020-07-07 17:31:10
+ * @LastEditTime: 2020-07-07 23:26:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/index.vue
@@ -155,11 +155,7 @@
       </div>
     </div>
     <Banner></Banner>
-    <div class="flash">
-      <div class="container">
-        秒杀
-      </div>
-    </div>
+    <flash-buy></flash-buy>
     <div class="phone">
       <div class="container">
         手机
@@ -170,6 +166,7 @@
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
 import Banner from '../component/Banner'
+import FlashBuy from '../component/FlashBuy'
 import 'swiper/css/swiper.css'
 
 export default {
@@ -178,6 +175,7 @@ export default {
     return {
       swiperOptions: {
         loop: true,
+        effect: 'fade',
         autoplay: {
           disableOnInteraction: false,
           delay: 1000 // 1秒切换一次
@@ -313,7 +311,8 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    Banner
+    Banner,
+    FlashBuy
   },
   directives: {
     swiper: directive
@@ -338,6 +337,7 @@ export default {
           width: auto
           position: absolute
           right: 30px
+          left: auto
         .swiper-container
           width: 100%
           height: 100%
@@ -347,15 +347,30 @@ export default {
           line-height: 69px
           text-align: center
           top: calc(50% - 35px)
+          right: 0
           z-index: 2
+          outline: none
+          --swiper-navigation-size: 20px
+          --swiper-navigation-color: #ccc
+          border-radius: 5px 0 0 5px
+          &:hover
+            background: rgba(0,0,0,.4)
+
         .swiper-button-prev
           height: 69px
           width: 41px
           line-height: 69px
           text-align: center
           top: calc(50% - 35px)
-          left: 244px
+          left: 234px
           z-index: 2
+          outline: none
+          --swiper-navigation-size: 20px
+          --swiper-navigation-color: #ccc
+          border-radius: 0 5px 5px 0
+
+          &:hover
+            background: rgba(0,0,0,.4)
       .submenu
         position: absolute
         top: 0
