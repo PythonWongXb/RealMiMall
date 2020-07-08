@@ -1,5 +1,10 @@
 @import './config.sass'
 @import './mixin.sass'
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
 .container
   width: 1126px
   margin: 0 auto
@@ -17,8 +22,6 @@ i
   font-style: normal
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-
-
 
 input
   outline: none
@@ -49,7 +52,52 @@ input
     &:hover:before
       margin-left: -55px
 
-*
-  margin: 0
-  padding: 0
-  box-sizing: border-box
+.head-index-title
+  height: 60px
+  padding-top: 2px
+  @include flex()
+  font-size: 22px
+  font-weight: 200
+  line-height: 58px
+  color: $colorB
+
+
+.title-product
+  font-size: 14px
+  line-height: 14px
+  font-weight: 400
+  text-overflow: ellipsis
+  color: #212121
+  overflow: hidden
+.info-product
+  height: 18px
+  line-height: 18px
+  margin: 0 20px 12px
+  font-size: 12px
+  text-overflow: ellipsis
+  color: #b0b0b0
+  overflow: hidden
+  white-space: nowrap
+
+.price-product
+  font-size: 14px
+  line-height: 14px
+  span
+    &:nth-child(1)
+      color: $colorA
+  del
+    color: $colorL
+    margin-left: 5px
+
+.each-phone
+  cursor: pointer
+  transition: transform .5s
+  &:hover
+    transform: translateY(-5px)
+    @include shadow()
+
+.banner-adv
+  height: 120px
+  img
+    width: 100%
+    height: 100%

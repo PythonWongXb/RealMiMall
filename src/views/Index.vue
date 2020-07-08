@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:53:27
- * @LastEditTime: 2020-07-07 23:26:56
+ * @LastEditTime: 2020-07-08 22:27:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/index.vue
@@ -156,23 +156,59 @@
     </div>
     <Banner></Banner>
     <flash-buy></flash-buy>
-    <div class="phone">
-      <div class="container">
-        手机
-      </div>
-    </div>
+    <banner-adv
+    :src="BanneradvList[0]"
+    ></banner-adv>
+    <phones>
+      <each-phone v-for="(item, index) in PhoneList.slice(2, 14)" :key="index"
+      :title="item.name"
+      :id="item.id"
+      :info="item.subtitle"
+      :price="item.price"
+      :img="item.mainImage.substr(0,2) ==='ht' ? item.mainImage : 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2c16238f786e4f93bdb175d7bf21aa47.jpg?thumb=1&w=200&h=200&f=webp&q=90'"
+      ></each-phone>
+    </phones>
+    <banner-adv
+    :src="BanneradvList[1]"
+    ></banner-adv>
+    <home-appliance
+    @hot="hot"
+    @hotmovie="reverse = false"
+    :reverse="reverse"
+    >
+      <each-phone v-for="item in PhoneListNew" :key="item.id"
+      :title="item.name"
+      :id="item.id"
+      :info="item.subtitle"
+      :price="item.price"
+      :img="item.mainImage.substr(0,2) ==='ht' ? item.mainImage : 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2c16238f786e4f93bdb175d7bf21aa47.jpg?thumb=1&w=200&h=200&f=webp&q=90'"
+      ></each-phone>
+      <special-box
+      :info="reverse ? SpecialPics[0]: SpecialPics[1]"
+      ></special-box>
+    </home-appliance>
   </div>
 </template>
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
 import Banner from '../component/Banner'
 import FlashBuy from '../component/FlashBuy'
+import Phones from '../component/Phones'
+import EachPhone from '../component/EachPhone'
+import BannerAdv from '../component/BannerAdv'
+import HomeAppliance from '../component/HomeAppliance'
+import SpecialBox from '../component/SpecialBox'
+
 import 'swiper/css/swiper.css'
 
 export default {
-  name: 'carrousel',
+  name: 'index',
+  mounted () {
+    this.getProduct()
+  },
   data () {
     return {
+      reverse: false,
       swiperOptions: {
         loop: true,
         effect: 'fade',
@@ -300,22 +336,55 @@ export default {
         ],
         [0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0]
+      ],
+      PhoneList: [
+      ],
+      BanneradvList: [
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/17ae6ffbdd4156119e41dec7d85ebced.jpeg?thumb=1&w=1226&h=120&f=webp&q=90',
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c3b86ede4dd31d7c126d56fbdde4f855.jpg?thumb=1&w=1226&h=120&f=webp&q=90'
+      ],
+      SpecialPics: [
+        { img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0e7eee530e4a103f2f5a0937a14bed53.jpg?thumb=1&w=100&h=100&f=webp&q=90', title: '小米壁画电视 65英寸', price: 6990, id: 1, name: '热门影音' },
+        { img: 'https://cdn.cnbj0.fds.api.mi-img.com/b2c-miapp-a1/T1r_x_BgLT1RXrhCrK.jpg?thumb=1&w=100&h=100', title: '9号平衡车', price: 1999, id: 2, name: '热门' }
+
       ]
     }
   },
   computed: {
     swiper () {
       return this.$refs.mySwiper.$swiper
+    },
+    PhoneListNew () {
+      if (this.reverse) {
+        return this.PhoneList.slice(2, 9).reverse()
+      } else {
+        return this.PhoneList.slice(2, 9)
+      }
     }
   },
   components: {
     Swiper,
     SwiperSlide,
     Banner,
-    FlashBuy
+    FlashBuy,
+    Phones,
+    EachPhone,
+    BannerAdv,
+    HomeAppliance,
+    SpecialBox
   },
   directives: {
     swiper: directive
+  },
+  methods: {
+    getProduct () {
+      this.axios.get('/products').then((res) => {
+        this.PhoneList = res.list
+      })
+    },
+    hot () {
+      this.reverse = true
+    }
   }
 }
 </script>
@@ -327,6 +396,9 @@ export default {
 @import '../assets/sass/config'
 
 .index
+  .banner-adv
+    padding: 22px 0
+    box-sizing: content-box
   .swiper
     height: 460px
     .container

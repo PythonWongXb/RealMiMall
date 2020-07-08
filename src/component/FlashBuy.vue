@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-07 20:08:59
- * @LastEditTime: 2020-07-07 23:33:15
+ * @LastEditTime: 2020-07-08 19:51:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/FlashBuy.vue
@@ -9,13 +9,13 @@
 <template>
   <div class='flash'>
     <div class="container">
-      <div class="head">
+      <div class="head-index-title">
         小米闪购
       </div>
       <div class="body">
         <div class="time">
           <div class="everytime iconfont">{{ hours }}:{{ minutes }}场</div>
-          <div class="title">距离结束还有</div>
+          <div class="title-product">距离结束还有</div>
           <div class="lasttime">
             <div class="h">{{ hours }}</div>
             <span>:</span>
@@ -29,157 +29,157 @@
             <swiper-slide>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
-              </div>
-              <div class='each-box'>
-                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
               <div class='each-box'>
                 <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
-                <div class="title">悦米YM人体工学椅 黑色</div>
-                <div class="info">健康坐姿，舒适体验</div>
-                <div class="price"><span>1099元</span><del>1399元</del></div>
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
+              </div>
+              <div class='each-box'>
+                <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1583380246.67713502.jpg?thumb=1&w=200&h=200" alt="">
+                <div class="title-product">悦米YM人体工学椅 黑色</div>
+                <div class="info-product">健康坐姿，舒适体验</div>
+                <div class="price-product"><span>1099元</span><del>1399元</del></div>
               </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -290,14 +290,7 @@ export default {
   .container
     @include flexc()
     align-items: flex-start
-    .head
-      height: 60px
-      padding-top: 2px
-      @include flex()
-      font-size: 22px
-      font-weight: 200
-      line-height: 58px
-      color: $colorB
+
     .body
       @include flex()
       height: 300px
@@ -350,8 +343,9 @@ export default {
       .swiper-box
         width: 892px
         height: 100%
-        margin-left: 14px
+        // margin-left: 14px
         position: relative
+        // overflow: hidden
         .swiper-container
           position: relative
           height: 100%
@@ -362,10 +356,11 @@ export default {
               width: 100%
               height: 100%
               display: flex
-
+              padding-left: 14px
               .each-box
-                // &:last-child
-                //   margin-right: 0
+                &:last-child
+                  // width: 218.5px
+                  margin-right: 0
                 @include flexc()
                 background: $colorG
                 height: 100%
@@ -376,39 +371,14 @@ export default {
                 padding-top: 40px
                 padding-bottom: 20px
                 margin-right: 15px
+                flex-shrink: 0
                 img
                   height: 166px
                   width: 160px
-                .title
-                  font-size: 14px
-                  line-height: 14px
-                  font-weight: 400
-                  text-overflow: ellipsis
-                  color: #212121
-                  overflow: hidden
-                .info
-                  height: 18px
-                  line-height: 18px
-                  margin: 0 20px 12px
-                  font-size: 12px
-                  text-overflow: ellipsis
-                  color: #b0b0b0
-                  overflow: hidden
-                  white-space: nowrap
-
-                .price
-                  font-size: 14px
-                  line-height: 14px
-                  span
-                    &:nth-child(1)
-                      color: $colorA
-                  del
-                    color: $colorL
-                    margin-left: 5px
         .swiper-button-prev
           position: absolute
           top: -30px
-          right: 50px
+          right: 36px
           left: auto
           outline: none
           --swiper-theme-color: #ff6600
@@ -416,21 +386,25 @@ export default {
           --swiper-navigation-size: 10px
           height: 24px
           width: 36px
-          background-color: $colorO
+          background-color: $colorN
           border: 1px solid $colorL
-          border-left: none
+          &:hover
+            color: $colorA
         .swiper-button-next
           position: absolute
           top: -30px
-          right: 14px
+          right: 0px
           left: auto
           border: none
           height: 24px
           width: 36px
-          background-color: $colorO
+          background-color: $colorN
           outline: none
           border: 1px solid $colorL
           --swiper-theme-color: #ff6600
-          --swiper-navigation-color: $colorL
+          --swiper-navigation-color: $coloA
           --swiper-navigation-size: 10px
+          border-left: none
+          &:hover
+            color: $colorA
   </style>
