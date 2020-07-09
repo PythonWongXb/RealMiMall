@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:28:32
- * @LastEditTime: 2020-07-07 18:10:06
+ * @LastEditTime: 2020-07-09 15:15:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/Header.vue
@@ -169,7 +169,6 @@ export default {
             &:hover ~ .subtitle
               height: 200px
               border-top: 1px $colorO solid
-
           .slot
             width: 120px
             height: 100%
@@ -178,7 +177,7 @@ export default {
         height: 100%
         @include flex()
         position: relative
-
+        z-index: 2
         .subsearch
           position: absolute
           height:241px
@@ -190,6 +189,8 @@ export default {
           .sub-box
             @include flexc()
             height: 100%
+            background-color: $colorG
+
             div
               width: 100%
               flex: 1

@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 09:51:08
- * @LastEditTime: 2020-07-09 10:53:27
+ * @LastEditTime: 2020-07-09 15:04:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachVideo.vue
 -->
 <template>
   <div class="each-video">
-    <div class="topimg">
+    <div class="topimg" @click="EmitChange">
       <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/101b19aca4bb489bcef0f503e44ec866.jpg?thumb=1&w=296&h=180&f=webp&q=90" title="点击播放视频" />
       <span><i></i></span>
     </div>
@@ -27,6 +27,12 @@ export default {
   props: {
     desc: String,
     title: String
+  },
+  methods: {
+    EmitChange () {
+      this.$emit('change')
+      this.$emit('record')
+    }
   }
 }
 </script>

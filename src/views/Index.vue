@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:53:27
- * @LastEditTime: 2020-07-09 11:07:09
+ * @LastEditTime: 2020-07-09 15:04:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/index.vue
@@ -191,11 +191,19 @@
     :src="BanneradvList[2]"
     ></banner-adv>
     <Videos-part>
-      <each-video v-for="item in videoList" :key="item.id"
+      <each-video v-for="(item,index) in videoList" :key="item.id"
       :title="item.title"
       :desc="item.desc"
+      @change="change"
+      @record="record(index)"
       ></each-video>
     </Videos-part>
+    <video-modal
+    :showSlide="showSlide"
+    @cancel="cancel"
+    :videoLists="videoList"
+    :index="index"
+    ></video-modal>
     <service-bar></service-bar>
   </div>
 </template>
@@ -211,6 +219,7 @@ import SpecialBox from '../component/SpecialBox'
 import VideosPart from '../component/Video'
 import EachVideo from '../component/EachVideo'
 import ServiceBar from '../component/ServicsBar'
+import VideoModal from '../component/VideoModal'
 
 import 'swiper/css/swiper.css'
 
@@ -221,6 +230,8 @@ export default {
   },
   data () {
     return {
+      index: 0,
+      showSlide: '',
       reverse: false,
       swiperOptions: {
         loop: true,
@@ -363,10 +374,10 @@ export default {
 
       ],
       videoList: [
-        { title: 'Redmi 10X系列发布会', desc: '10X系列发布会' },
-        { title: '小米青春10发布会', desc: '' },
-        { title: '小米10 8K手机拍大片', desc: '' },
-        { title: '10X系列发布会', desc: '' }
+        { title: 'Redmi 10X系列发布会', desc: '10X系列发布会', src: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11c70c96529b6e6938567ec1aa0910e0.mp4', id: 0 },
+        { title: '小米青春10发布会', desc: '', src: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7cdabcaa763392c86b944eaf4e68d6a3.mp4', id: 1 },
+        { title: '小米10 8K手机拍大片', desc: '', src: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e25d81c4922fca5ebe51877717ef9b76.mp4', id: 2 },
+        { title: '10X系列发布会', desc: '', src: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/eadb8ddc86f1791154442a928b042e2f.mp4', id: 3 }
       ]
     }
   },
@@ -394,7 +405,8 @@ export default {
     SpecialBox,
     VideosPart,
     EachVideo,
-    ServiceBar
+    ServiceBar,
+    VideoModal
   },
   directives: {
     swiper: directive
@@ -407,6 +419,18 @@ export default {
     },
     hot () {
       this.reverse = true
+    },
+    change () {
+      this.showSlide = 'slideDown'
+    },
+    cancel () {
+      this.showSlide = 'slideUp'
+      setTimeout(() => {
+        this.showSlide = ''
+      }, 600)
+    },
+    record (i) {
+      this.index = i
     }
   }
 }
