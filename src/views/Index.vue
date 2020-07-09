@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:53:27
- * @LastEditTime: 2020-07-08 22:27:19
+ * @LastEditTime: 2020-07-09 11:07:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/index.vue
@@ -187,6 +187,16 @@
       :info="reverse ? SpecialPics[0]: SpecialPics[1]"
       ></special-box>
     </home-appliance>
+    <banner-adv
+    :src="BanneradvList[2]"
+    ></banner-adv>
+    <Videos-part>
+      <each-video v-for="item in videoList" :key="item.id"
+      :title="item.title"
+      :desc="item.desc"
+      ></each-video>
+    </Videos-part>
+    <service-bar></service-bar>
   </div>
 </template>
 <script>
@@ -198,6 +208,9 @@ import EachPhone from '../component/EachPhone'
 import BannerAdv from '../component/BannerAdv'
 import HomeAppliance from '../component/HomeAppliance'
 import SpecialBox from '../component/SpecialBox'
+import VideosPart from '../component/Video'
+import EachVideo from '../component/EachVideo'
+import ServiceBar from '../component/ServicsBar'
 
 import 'swiper/css/swiper.css'
 
@@ -341,12 +354,19 @@ export default {
       ],
       BanneradvList: [
         'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/17ae6ffbdd4156119e41dec7d85ebced.jpeg?thumb=1&w=1226&h=120&f=webp&q=90',
-        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c3b86ede4dd31d7c126d56fbdde4f855.jpg?thumb=1&w=1226&h=120&f=webp&q=90'
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c3b86ede4dd31d7c126d56fbdde4f855.jpg?thumb=1&w=1226&h=120&f=webp&q=90',
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88e35cffc82cd98cd53172460067af17.jpg?thumb=1&w=1226&h=120&f=webp&q=90'
       ],
       SpecialPics: [
         { img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0e7eee530e4a103f2f5a0937a14bed53.jpg?thumb=1&w=100&h=100&f=webp&q=90', title: '小米壁画电视 65英寸', price: 6990, id: 1, name: '热门影音' },
         { img: 'https://cdn.cnbj0.fds.api.mi-img.com/b2c-miapp-a1/T1r_x_BgLT1RXrhCrK.jpg?thumb=1&w=100&h=100', title: '9号平衡车', price: 1999, id: 2, name: '热门' }
 
+      ],
+      videoList: [
+        { title: 'Redmi 10X系列发布会', desc: '10X系列发布会' },
+        { title: '小米青春10发布会', desc: '' },
+        { title: '小米10 8K手机拍大片', desc: '' },
+        { title: '10X系列发布会', desc: '' }
       ]
     }
   },
@@ -371,7 +391,10 @@ export default {
     EachPhone,
     BannerAdv,
     HomeAppliance,
-    SpecialBox
+    SpecialBox,
+    VideosPart,
+    EachVideo,
+    ServiceBar
   },
   directives: {
     swiper: directive
