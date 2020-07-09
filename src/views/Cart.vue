@@ -7,7 +7,9 @@
  * @FilePath: /realmimall/src/views/Cart.vue
 -->
 <template>
-  <div>cart</div>
+  <div class='cart'>
+    cart
+  </div>
 </template>
 
 <script>
@@ -17,5 +19,11 @@ export default {
 </script>
 
 <style lang='sass' scoped>
+@import url('//at.alicdn.com/t/font_1894585_h5kk296vn1.css')
+@import '../assets/sass/base'
+@import '../assets/sass/mixin'
+@import '../assets/sass/config'
+
+.cart
 
 </style>

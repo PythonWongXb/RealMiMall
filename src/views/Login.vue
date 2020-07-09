@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 17:03:27
- * @LastEditTime: 2020-07-09 22:40:20
+ * @LastEditTime: 2020-07-09 22:48:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/Login.vue
@@ -105,6 +105,7 @@ export default {
         .then((res) => {
           console.log(res)
           this.$store.dispatch('saveUserName', res.username)
+          localStorage.setItem('name', 'caibin')
           window.location.href = '/index'
         })
     },

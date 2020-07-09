@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'product',
+  name: 'video-modal',
   props: {
     showSlide: String,
     videoLists: Array,
