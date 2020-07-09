@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-09 16:40:10
+ * @LastEditTime: 2020-07-09 17:36:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -48,7 +48,7 @@
         </a>
       </div>
       <div class="right-part">
-        <a v-if="!username" href="javascript:;">登录</a>
+        <a v-if="!username" href="/login">登录</a>
         <user-index v-if="username"></user-index>
         <a v-if="!username" href="javascript:;">注册</a>
         <a href="javascript:;">消息通知</a>
@@ -56,7 +56,7 @@
           <div class="cart">
             <i class='icon-circle-users'></i>
             <span>购物车</span>
-            <span>({{ cartcount }})</span>
+            <span>({{ cartCount }})</span>
           </div>
           <div class='all-order'>
             什么也没有
@@ -75,13 +75,20 @@ export default {
   data () {
     return {
       // vuex
-      username: 'Ppythonista',
-      cartcount: 0
     }
   },
   components: {
     UserIndex
+  },
+  computed: {
+    username () {
+      return this.$store.state.username
+    },
+    cartCount () {
+      return this.$store.state.cartCount
+    }
   }
+
 }
 </script>
 

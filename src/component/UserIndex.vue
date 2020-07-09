@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:38:38
- * @LastEditTime: 2020-07-09 15:16:37
+ * @LastEditTime: 2020-07-09 17:37:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/UserIndex.vue
@@ -18,7 +18,7 @@
         <div class="">晒单评价</div>
         <div class="">我的喜欢</div>
         <div class="">小米账户</div>
-        <div class="">退出登录</div>
+        <div @click="logout" class="">退出登录</div>
       </div>
     </div>
   </div>
@@ -26,7 +26,17 @@
 
 <script>
 export default {
-  name: 'UserIndex'
+  name: 'UserIndex',
+  methods: {
+    logout () {
+      this.axios.post('/user/logout').then((res) => {
+        this.$message.success('退出successful')
+        // this.$cookie.set('userId', '', { expires: '-1' })
+        this.$store.dispatch('saveUserName', '')
+        this.$store.dispatch('saveCartCount', 0)
+      })
+    }
+  }
 }
 </script>
 
