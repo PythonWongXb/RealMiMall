@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-09 14:16:48
+ * @LastEditTime: 2020-07-09 16:40:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -138,5 +138,5 @@ export default {
           overflow: hidden
           transition: height .5s
           @include shadow()
-          z-index: 1
+          z-index: 3
 </style>

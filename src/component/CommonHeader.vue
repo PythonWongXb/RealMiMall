@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:28:32
- * @LastEditTime: 2020-07-09 15:15:49
+ * @LastEditTime: 2020-07-09 16:34:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/Header.vue
@@ -145,9 +145,11 @@ export default {
           display: flex
           align-items: center
           .subtitle
+            box-sizing: content-box
             position: fixed
             overflow: hidden
-            transition: all .5s
+            transition-property: height opacity
+            transition-duration: .5s
             background: $colorG
             height: 0px
             width: 100%
@@ -155,6 +157,7 @@ export default {
             top: 140px
             z-index: 11
             @include shadow()
+            // border-top: 1px transparent solid
             @include flex()
             .container
               @include flex()

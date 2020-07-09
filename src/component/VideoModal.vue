@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 11:37:23
- * @LastEditTime: 2020-07-09 14:40:57
+ * @LastEditTime: 2020-07-09 15:44:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/VideoModal.vue
@@ -11,7 +11,7 @@
     <div class="video-box" v-if="s">
       <div class="video-mask" v-if="s === 'slideDown'" @click="closeVideo"></div>
       <div class="video" :class="s">
-        <div class="close-icon iconfont" @click="closeVideo"></div>
+        <div class="close-icon iconfont" @click="closeVideo">{{title}}</div>
         <video
           controls="controls"
           autoplay
@@ -42,6 +42,9 @@ export default {
     },
     src () {
       return this.videoLists[this.index].src
+    },
+    title () {
+      return this.videoLists[this.index].title
     }
   },
   methods: {
@@ -105,9 +108,14 @@ export default {
         animation: slideUp 0.6s linear
 
       .close-icon
-        height: 0
-        width: 0
-
+        height: 80px
+        width: 100%
+        background: #fff
+        position: relative
+        top: 80px
+        line-height: 80px
+        font-size: 18px
+        padding-left: 20px
       .close-icon:hover::after
         color: red
         transform: scale(1.5)
@@ -117,10 +125,10 @@ export default {
         transition: 1s all
         position: fixed
         right: 20px
-        top: 20px
+        top: 80px
         content: '\e653'
         z-index: 9999999
-        color: #fff
+        color: #333
         background-color: transparent
         font-size: 30px
         cursor: pointer

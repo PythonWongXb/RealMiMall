@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:53:27
- * @LastEditTime: 2020-07-09 15:04:41
+ * @LastEditTime: 2020-07-09 16:02:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/index.vue
@@ -19,138 +19,9 @@
           <div class="swiper-button-next"></div><!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
         </div>
         <div class="submenu">
-          <div class="each-box">
-            <div class="title iconfont">手机/电话卡</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">电视/盒子</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList1" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">手机/电话卡</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">电视/盒子</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList1" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">手机/电话卡</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">电视/盒子</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList1" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">手机/电话卡</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">电视/盒子</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList1" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">手机/电话卡</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">电视/盒子</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList1" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">手机/电话卡</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="each-box">
-            <div class="title iconfont">电视/盒子</div>
-            <div class="sub">
-              <div class='subOne' v-for="i in menuList1" :key="i.id">
-                <div class='subTwo' v-for="j in i" :key="j.id">
-                  <a href=""><img :src="j ? j.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
-                  <div>{{j? j.name: '无名'}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <each-box v-for="item in menuListAll" :key="item.id"
+          :menuList="item.menuList"
+          ></each-box>
         </div>
       </div>
     </div>
@@ -220,6 +91,7 @@ import VideosPart from '../component/Video'
 import EachVideo from '../component/EachVideo'
 import ServiceBar from '../component/ServicsBar'
 import VideoModal from '../component/VideoModal'
+import EachBox from '../component/EachBox'
 
 import 'swiper/css/swiper.css'
 
@@ -274,6 +146,452 @@ export default {
           img:
             'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/956e0b7aa4cf7679e795b8db74d2b14a.jpg?thumb=1&w=1226&h=460&f=webp&q=90',
           page: 46
+        }
+      ],
+      menuListAll: [
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
+        },
+        {
+          menuList: [
+            [
+              {
+                id: 30,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米CC9'
+              },
+              {
+                id: 31,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '小米8青春版'
+              },
+              {
+                id: 32,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: 'Redmi K20 Pro'
+              },
+              {
+                id: 33,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 34,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              },
+              {
+                id: 35,
+                img:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cadc8b00dbe3b5615bd6ab657715baf.png?thumb=1&w=40&h=40&f=webp&q=90',
+                name: '移动4G专区'
+              }
+            ],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ]
         }
       ],
       menuList: [
@@ -406,7 +724,8 @@ export default {
     VideosPart,
     EachVideo,
     ServiceBar,
-    VideoModal
+    VideoModal,
+    EachBox
   },
   directives: {
     swiper: directive
@@ -500,52 +819,4 @@ export default {
         z-index: 2
         @include flexc()
         padding: 20px 0
-        .each-box
-          height: 100%
-          width: 100%
-          &:hover
-            background: $colorA
-          &:hover
-            .sub
-              display: flex
-          .title
-            display: flex
-            padding-left: 30px
-            color: $colorG
-            width: calc(100% - 20px)
-            line-height: 35px
-            position: relative
-            &::after
-              content: '\e65c'
-              position: absolute
-              right: 0
-
-          .sub
-            position: absolute
-            left: 234px
-            top: 0
-            height: 460px
-            background-color: $colorG
-            z-index: 2
-            display: none
-            @include shadow()
-            .subOne
-              height: 460px
-              .subTwo
-                height: calc(76.66px)
-                width: 223px
-                @include flex()
-                justify-content: flex-start
-                padding-left: 20px
-                color: $colorB
-                font-size: 14px
-                cursor: pointer
-                &:hover
-                  color: $colorA
-
-                img
-                  height: 40px
-                  width: 40px
-                  margin-right: 12px
-
 </style>
