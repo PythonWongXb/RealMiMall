@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:38:38
- * @LastEditTime: 2020-07-09 17:37:25
+ * @LastEditTime: 2020-07-10 22:10:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/UserIndex.vue
@@ -9,7 +9,7 @@
 <template>
   <div class='userindex'>
     <div class='top'>
-      <div class="name">Pythonista Wong</div>
+      <div class="name">{{ username }}</div>
       <div class="icon iconfont"></div>
     </div>
     <div class="bottom">
@@ -27,14 +27,17 @@
 <script>
 export default {
   name: 'UserIndex',
+  props: {
+    username: String
+  },
   methods: {
     logout () {
       this.axios.post('/user/logout').then((res) => {
         this.$message.success('退出successful')
-        // this.$cookie.set('userId', '', { expires: '-1' })
         localStorage.removeItem('userId')
         this.$store.dispatch('saveUserName', '')
         this.$store.dispatch('saveCartCount', 0)
+        this.$router.push('/index')
       })
     }
   }

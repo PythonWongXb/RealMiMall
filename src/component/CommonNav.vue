@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-09 17:36:41
+ * @LastEditTime: 2020-07-10 22:11:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -49,11 +49,14 @@
       </div>
       <div class="right-part">
         <a v-if="!username" href="/login">登录</a>
-        <user-index v-if="username"></user-index>
+        <user-index v-if="username"
+        :username="username"
+        >
+        </user-index>
         <a v-if="!username" href="javascript:;">注册</a>
         <a href="javascript:;">消息通知</a>
         <a class="cart-box" href="javascript:;">
-          <div class="cart">
+          <div class="cart" @click="jumpcart">
             <i class='icon-circle-users'></i>
             <span>购物车</span>
             <span>({{ cartCount }})</span>
@@ -72,6 +75,11 @@ import UserIndex from '@/component/UserIndex'
 
 export default {
   name: 'CommonNav',
+  methods: {
+    jumpcart () {
+      this.$router.push('/order/cart')
+    }
+  },
   data () {
     return {
       // vuex
