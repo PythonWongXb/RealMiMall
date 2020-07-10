@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 10:24:31
- * @LastEditTime: 2020-07-09 17:32:53
+ * @LastEditTime: 2020-07-10 08:55:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/App.vue
@@ -19,8 +19,10 @@ export default {
     return {}
   },
   mounted () {
-    this.getUser()
-    this.getCartCount()
+    if (localStorage.getItem('userId')) {
+      this.getUser()
+      this.getCartCount()
+    }
   },
   methods: {
     getUser () {
