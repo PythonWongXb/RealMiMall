@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-12 21:16:28
+ * @LastEditTime: 2020-07-12 22:55:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -74,7 +74,7 @@
                 <div class="num">X {{ item.quantity }}</div>
                 <i class='icon-icon-test1' @click="delProduct(item.productId)"></i>
               </div>
-              <div class="all-money">
+              <div  v-if="cartCount !== 0" class="all-money">
                 <div class="left">
                   <div class="top">
                     <span>共{{ cartCount }}件商品</span>
@@ -102,6 +102,7 @@ import loading from '@/component/Loading'
 export default {
   name: 'CommonNav',
   mounted () {
+    this.getCartList()
     this.$refs.cart.addEventListener('mouseover', () => {
       this.flag = true
       this.showDetails()
@@ -118,7 +119,7 @@ export default {
       this.showDetails()
       setTimeout(() => {
         this.loading = true
-      }, 200)
+      }, 20)
     })
     this.$refs.cartBox.addEventListener('mouseout', () => {
       if (this.loading) {
@@ -133,19 +134,23 @@ export default {
       this.$router.push('/order/cart')
     },
     getCartList () {
-      this.axios.get('/carts').then(res => {
+      this.axios.get('/carts').then((res) => {
         this.lists = res.cartProductVoList
         this.money = res.cartTotalPrice
         this.loading = false
         if (this.username) {
           this.$store.dispatch('saveCartCount', res.cartTotalQuantity)
         }
+      }).catch((res) => {
+        if (res.status === 10) {
+          this.loading = false
+        }
       })
     },
     showDetails () {
       const s = this.$refs.realsub.offsetHeight
       if (this.flag) {
-        if (!this.cartCount) {
+        if (this.cartCount === 0) {
           this.$refs.cartBox.style.height = '100px'
         } else {
           this.$refs.cartBox.style.height = `${s}px`
@@ -158,6 +163,7 @@ export default {
       this.axios.delete(`/carts/${index}`).then((res) => {
         this.$message.success('删除成功')
         this.lists = res.cartProductVoList
+        this.money = res.cartTotalPrice
         this.$store.dispatch('saveCartCount', res.cartTotalQuantity)
         this.showDetails()
       })
