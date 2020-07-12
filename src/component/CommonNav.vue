@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-12 18:25:24
+ * @LastEditTime: 2020-07-12 21:16:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -71,10 +71,23 @@
                 />
                 <div class="name">{{ item.productName }}</div>
                 <div class="price">{{ item.productPrice }}</div>
-                <div class="num">{{ item.quantity }}</div>
+                <div class="num">X {{ item.quantity }}</div>
                 <i class='icon-icon-test1' @click="delProduct(item.productId)"></i>
               </div>
-              <div v-if="cartCount === 0" class="none">空空乳液</div>
+              <div class="all-money">
+                <div class="left">
+                  <div class="top">
+                    <span>共{{ cartCount }}件商品</span>
+                  </div>
+                  <div class="bottom">
+                    <span>{{ money }}</span><i>元</i>
+                  </div>
+                </div>
+                <div class="right" @click="jumptocart">
+                  去购物车结算
+                </div>
+              </div>
+              <div v-if="cartCount === 0" class="none">购物车中还没有商品，赶紧选购吧！</div>
             </div>
           </div>
         </a>
@@ -105,7 +118,7 @@ export default {
       this.showDetails()
       setTimeout(() => {
         this.loading = true
-      }, 500)
+      }, 200)
     })
     this.$refs.cartBox.addEventListener('mouseout', () => {
       if (this.loading) {
@@ -122,6 +135,7 @@ export default {
     getCartList () {
       this.axios.get('/carts').then(res => {
         this.lists = res.cartProductVoList
+        this.money = res.cartTotalPrice
         this.loading = false
         if (this.username) {
           this.$store.dispatch('saveCartCount', res.cartTotalQuantity)
@@ -131,7 +145,11 @@ export default {
     showDetails () {
       const s = this.$refs.realsub.offsetHeight
       if (this.flag) {
-        this.$refs.cartBox.style.height = `${s}px`
+        if (!this.cartCount) {
+          this.$refs.cartBox.style.height = '100px'
+        } else {
+          this.$refs.cartBox.style.height = `${s}px`
+        }
       } else {
         this.$refs.cartBox.style.height = '0px'
       }
@@ -143,13 +161,17 @@ export default {
         this.$store.dispatch('saveCartCount', res.cartTotalQuantity)
         this.showDetails()
       })
+    },
+    jumptocart () {
+      this.$router.push('/order/cart')
     }
   },
   data () {
     return {
       lists: [],
       loading: true,
-      flag: false
+      flag: false,
+      money: 0
     }
   },
   components: {
@@ -209,7 +231,6 @@ export default {
           i
             margin-right: 5px
         .all-order
-          padding: 0 10px
           background: $colorG
           color: $colorL
           position: absolute
@@ -223,8 +244,51 @@ export default {
           @include shadow()
           z-index: 3
           .content
+            .all-money
+              @include flex()
+              padding: 15px 20px
+              background: #fafafa
+              .left
+                width: 100%
+                @include flexc()
+                text-align: left
+                .top
+                  width: 100%
+                  font-size: 12px
+                  line-height: 12px
+                  margin-bottom: 5px
+
+                .bottom
+                  width: 100%
+                  height: 26px
+                  font-size: 12px
+                  line-height: 26px
+                  display: flex
+                  flex: 1
+                  align-items: flex-end
+                  span
+                    font-size: 24px
+                    color: $colorA
+                    line-height: 26px
+                  i
+                    font-size: 12px
+                    line-height: 20px
+                    color: $colorA
+
+              .right
+                width: 130px
+                height: 40px
+                background: $colorA
+                color: $colorG
+                flex-shrink: 0
+            .none
+              height: 100px
+              line-height: 100px
+              font-size: 14px
+              color: #424242
             .each
               @include flex()
+              padding: 5px 10px
               i
                 &:hover
                   color: red
