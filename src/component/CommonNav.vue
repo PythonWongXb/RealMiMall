@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-12 18:15:55
+ * @LastEditTime: 2020-07-12 18:25:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -74,6 +74,7 @@
                 <div class="num">{{ item.quantity }}</div>
                 <i class='icon-icon-test1' @click="delProduct(item.productId)"></i>
               </div>
+              <div v-if="cartCount === 0" class="none">空空乳液</div>
             </div>
           </div>
         </a>
