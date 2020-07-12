@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:32:20
- * @LastEditTime: 2020-07-10 22:19:24
+ * @LastEditTime: 2020-07-12 11:25:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/OrderHeader.vue
@@ -101,4 +101,6 @@ export default {
           text-align: center
           line-height: 40px
           padding: 0 5px
+          &:hover
+            color: $colorA
 </style>

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-11 14:37:40
- * @LastEditTime: 2020-07-11 17:35:12
+ * @LastEditTime: 2020-07-12 10:52:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachPaybox.vue
@@ -56,7 +56,15 @@ export default {
     },
     change (index) {
       this.choose = index
+      // console.log(index)
       this.$emit('c')
+      if (this.choose === 1 && this.title === '支付平台') {
+        this.$emit('submitOrder')
+      } else if (this.choose === 3 && this.title === '支付平台') {
+        this.$emit('submitOrderAlipay')
+      } else {
+        this.$emit('subother')
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:57:58
- * @LastEditTime: 2020-07-11 17:37:59
+ * @LastEditTime: 2020-07-12 10:59:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/OrderPay.vue
@@ -63,6 +63,9 @@
             :more=0
             :limit="limit"
             @c="c1"
+            @submitOrder="paySubmit(2)"
+            @submitOrderAlipay="paySubmit(1)"
+            @subother="sub1"
             ></each-paybox>
             <each-paybox
             :fatherchoose="choose2"
@@ -72,7 +75,11 @@
             @change="change"
             :limit="limit"
             @c="c2"
-            ></each-paybox>
+            @submitOrder="paySubmit(2)"
+            @submitOrderAlipay="paySubmit(1)"
+            @subother="sub1"
+            >
+            </each-paybox>
             <each-paybox
             :fatherchoose="choose3"
             :limit="limit"
@@ -80,7 +87,9 @@
             :title="payfast.title"
             :more=0
             @c="c3"
-
+            @submitOrder="paySubmit(2)"
+            @submitOrderAlipay="paySubmit(1)"
+            @subother="sub1"
             ></each-paybox>
           </div>
         </div>
@@ -92,10 +101,41 @@
             :title="paybyday.title"
             :more=0
             @c="c4"
+            @submitOrder="paySubmit(2)"
+            @submitOrderAlipay="paySubmit(1)"
+            @subother="sub1"
             ></each-paybox>
         </div>
       </div>
     </div>
+      <scan-pay-code v-if="showPay" @close="closePayModal" :img="payImg"></scan-pay-code>
+    <modal
+      title="支付确认"
+      btnType="3"
+      :showModal="showPayModal"
+      sureText="查看订单"
+      cancelText="未支付"
+      @cancel="showPayModal=false"
+      @submit="goOrderList"
+    >
+      <template v-slot:body>
+        <p>您确认是否完成支付？</p>
+      </template>
+    </modal>
+    <modal
+      title="暂无接口"
+      btnType="1"
+      :showModal="showPayModal2"
+      sureText="确定"
+      cancelText="未支付"
+      @cancel="showPayModal2=false"
+      @submit="showPayModal2=false"
+    >
+      <template v-slot:body>
+        <p>暂无接口啊兄弟，换个接口吧</p>
+      </template>
+    </modal>
+
     <servics-bar></servics-bar>
   </div>
 </template>
@@ -103,6 +143,9 @@
 <script>
 import ServicsBar from '../component/ServicsBar'
 import EachPaybox from '../component/EachPaybox'
+import QRCode from 'qrcode'
+import ScanPayCode from './../component/ScanPayCode'
+import Modal from './../component/Modal'
 export default {
   name: 'orderpay',
   data () {
@@ -180,6 +223,7 @@ export default {
       showPay: false, // 是否显示微信支付弹框
       payImg: '', // 微信支付的二维码地址
       showPayModal: false, // 是否显示二次支付确认弹框
+      showPayModal2: false, // 是否显示二次支付确认弹框
       payment: 0, // 订单总金额
       T: ''// 定时器ID
     }
@@ -189,7 +233,9 @@ export default {
   },
   components: {
     ServicsBar,
-    EachPaybox
+    EachPaybox,
+    ScanPayCode,
+    Modal
   },
   computed: {
     cards () {
@@ -245,6 +291,51 @@ export default {
       this.choose2 = 0
       this.choose3 = 0
       this.choose4 = 1
+    },
+    paySubmit (payType) {
+      if (payType === 1) {
+        window.open('/order/alipay?orderId=' + this.orderId, '_blank')
+      } else {
+        this.axios.post('/pay', {
+          orderId: this.orderId,
+          orderName: 'Vue高仿小米商城',
+          amount: 0.01, // 单位元
+          payType: 2 // 1支付宝，2微信
+        }).then((res) => {
+          QRCode.toDataURL(res.content)
+            .then(url => {
+              this.showPay = true
+              this.payImg = url
+              this.loopOrderState()
+            })
+            .catch(() => {
+              this.$message.error('微信二维码生成失败，请稍后重试')
+            })
+        })
+      }
+    },
+    // 关闭微信弹框
+    closePayModal () {
+      this.showPay = false
+      this.showPayModal = true
+      clearInterval(this.T)
+    },
+    // 轮询当前订单支付状态
+    loopOrderState () {
+      this.T = setInterval(() => {
+        this.axios.get(`/orders/${this.orderId}`).then((res) => {
+          if (res.status === 20) {
+            clearInterval(this.T)
+            this.goOrderList()
+          }
+        })
+      }, 1000)
+    },
+    goOrderList () {
+      window.location.href = '/order/list'
+    },
+    sub1 () {
+      this.showPayModal2 = true
     }
   }
 }
