@@ -266,12 +266,7 @@ export default {
           shippingId: item.id
         })
         .then(res => {
-          this.$router.push({
-            path: '/order/pay',
-            query: {
-              orderNo: res.orderNo
-            }
-          })
+          window.location.href = `/order/pay?orderNo=${res.orderNo}`
         })
     }
   }
