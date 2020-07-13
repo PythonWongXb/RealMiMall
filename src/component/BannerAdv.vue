@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-08 10:51:56
- * @LastEditTime: 2020-07-13 18:07:44
+ * @LastEditTime: 2020-07-13 23:20:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/BannerAdv.vue
@@ -28,6 +28,7 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .banner-adv
   background-color: $colorN
 

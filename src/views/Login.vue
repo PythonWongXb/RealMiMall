@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 17:03:27
- * @LastEditTime: 2020-07-10 08:53:40
+ * @LastEditTime: 2020-07-13 22:11:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/Login.vue
@@ -133,168 +133,202 @@ export default {
 .login
   .footer
     .top-box
-      margin-top: 100px
-      height: 21px
+      position: relative
       @include flex()
       justify-content: center
-      position: relative
+      height: 21px
+      margin-top: 100px
+
       .each
         padding: 0 10px
-        color: #757575
         font-size: 14px
+        color: #757575
+
         &:last-child::after
-          margin-left: 0
           content: ''
           height: 0
           width: 0
+          margin-left: 0
 
       .each:after
         content: ''
-        height: 15px
-        width: 1px
-        background: #757575
         position: absolute
         top: 2.5px
+        height: 15px
+        width: 1px
         margin-left: 10px
+        background: #757575
 
     .bottom
-      height: 46px
       @include flex()
       justify-content: center
-      color: #757575
+      height: 46px
       font-size: 14px
+      color: #757575
+
   .header
     .logo
-      width: 200px
       height: 98px
+      width: 200px
       background: url(https://account.xiaomi.com/static/res/7f6f2f5/account-static/respassport/acc-2014/img/mistore_logo.png) no-repeat
+
   .body
     height: 588px
     background: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aece569d6689b4c461bb53efd9eea9c7.jpg)
+
     .container
       display: flex
       justify-content: flex-end
       align-items: flex-end
       height: 100%
+
     .main-content
-      width: 410px
-      height: 556px
-      background: #fff
       @include flexc()
+      height: 556px
+      width: 410px
+      background: #fff
+
       .head
         @include flex()
         height: 87px
+
         .login-num
-          font-size: 24px
           line-height: 24px
+          font-size: 24px
           color: $colorC
           cursor: pointer
+
           &.current
             color: $colorA
+
           &:hover
             color: $colorA
+
         .line
           height: 29px
           width: 2px
-          background-color: $colorN
           margin: 0 42px 0 35px
+          background-color: $colorN
+
         .login-qr
-          font-size: 24px
           line-height: 24px
+          font-size: 24px
           color: $colorC
           cursor: pointer
           &:hover
             color: $colorA
+
           &.current
             color: $colorA
+
       .form-num
         @include flexc()
         justify-content: flex-start
-        width: 100%
         flex: 1
+        width: 100%
+
         input
           height: 48px
-          line-height: 48px
           width: 306px
-          outline: none
-          border: 1px solid $colorO
+          line-height: 48px
           margin-bottom: 14px
           text-indent: 10px
+          border: 1px solid $colorO
           color: $colorB
+          outline: none
+
         .password
           margin-bottom: 0
+
         .submit
+          display: block
           margin-top: 24px
-          background-color: $colorA
           width: 306px
           height: 50px
-          line-height: 50px
-          display: block
           margin-bottom: 14px
-          text-align: center
+          line-height: 50px
           font-size: 14px
+          text-align: center
+          background-color: $colorA
           color: #fff
           cursor: pointer
+
         .setting
-          height:143px
-          width: 306px
           @include flex()
           align-items: flex-start
+          height:143px
+          width: 306px
+
           .left
+            line-height: 14px
             font-size: 14px
             color: $colorA
-            line-height: 14px
+
           span
-            color: $colorD
-            font-size: 14px
             padding: 0 5px
+            font-size: 14px
+            color: $colorD
+
           .right
             @include flex()
+            line-height: 14px
             font-size: 14px
             color: $colorN
-            line-height: 14px
+
             a
               &:hover
                 color: $colorA
+
       .form-qr
         @include flex()
+        justify-content: center
         flex: 1
         width: 100%
-        justify-content: center
+
       .other
         @include flexc()
         width: 306px
+
         .top
           width: 100%
+
           .oth_type_tit
             width: 100%
+            padding-top: 10px
             border: 0
             border-top: 1px solid $colorO
-            padding-top: 10px
+
           .oth_type_txt
             font-size: 12px
             color: $colorO
+
         .bottom
-          padding: 0 50px
           @include flex()
           width: 100%
+          padding: 0 50px
+
           .qq-box
             @include box(#0288d1)
+
           .qq
             @include inbox(-18px, 0)
 
           .weibo-box
             @include box(#d32f2f)
+
           .weibo
             @include inbox(-36px, 0)
 
           .alipay-box
             @include box(#0ae)
+
           .alipay
             @include inbox(-18px, 0)
 
           .wechat-box
             @include box(#00d20d)
+
           .wechat
             @include inbox(-18px, 0)
+
 </style>

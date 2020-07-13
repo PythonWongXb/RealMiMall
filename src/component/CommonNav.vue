@@ -213,11 +213,13 @@ export default {
       margin-right: 8px
       line-height: 40px
       font-size: 12px
+
       &:hover
         color: $colorG
 
     .right-part
       @include flex()
+
       .cart-box
         position: relative
         display: block
@@ -228,6 +230,7 @@ export default {
         .cart
           @include flex()
           justify-content: center
+
           &:hover
             color: $colorA
             background: $colorG
@@ -247,6 +250,7 @@ export default {
           color: $colorL
           background: $colorG
           @include shadow()
+
           .content
             .all-money
               @include flex()
@@ -272,10 +276,12 @@ export default {
                   width: 100%
                   line-height: 26px
                   font-size: 12px
+
                   span
                     line-height: 26px
                     font-size: 24px
                     color: $colorA
+
                   i
                     line-height: 20px
                     font-size: 12px

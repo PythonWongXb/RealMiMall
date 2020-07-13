@@ -82,10 +82,13 @@ export default {
   .container
     @include flexc()
     justify-content: flex-start
+
     img
+      flex-shrink: 0
       height: 100%
       width: 100%
-      flex-shrink: 0
+
   .price-detail
     height: 2000px
+
 </style>

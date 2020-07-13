@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-08 09:48:29
- * @LastEditTime: 2020-07-13 20:13:06
+ * @LastEditTime: 2020-07-13 23:22:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachPhone.vue
@@ -47,22 +47,28 @@ export default {
   margin-bottom: 14px
   margin-right: 14px
   background: $colorG
+
   &:nth-child(n+5)
     margin-bottom: 0
+
   &:nth-child(4n)
     margin-right: 0
+
   .phone-box
     @include flexc()
     text-align: center
     padding-top: 20px
+
     img
       height: 160px
+
     .info-product
       width: 70%
       overflow: hidden
       white-space: nowrap
       text-overflow: ellipsis
       margin-top: 5px
+
     .title-product
       width: 70%
       overflow: hidden

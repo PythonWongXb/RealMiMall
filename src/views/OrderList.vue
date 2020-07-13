@@ -187,25 +187,29 @@ export default {
 <style lang="sass">
 @import './../assets/sass/config'
 @import './../assets/sass/mixin'
+
 .order-list
   .wrapper
-    background-color: $colorJ
     padding-top: 33px
     padding-bottom: 110px
+    background-color: $colorJ
+
     .order-box
       .order
+        margin-bottom: 100px
         border: 1px red solid
         background-color: $colorG
-        margin-bottom: 100px
+
         &:last-child
           margin-bottom: 0
 
         .order-title
           height: 74px
-          background-color: $colorK
           padding: 0 43px
           font-size: 16px
+          background-color: $colorK
           color: $colorC
+
           .item-info
             span
               margin: 0 9px
@@ -216,14 +220,18 @@ export default {
 
         .order-content
           padding: 0 43px
+
           .good-box
             width: 88%
+
             .good-list
               display: flex
               align-items: center
               height: 145px
+
               .good-img
                 width: 112px
+
                 img
                   width: 100%
 
@@ -235,6 +243,7 @@ export default {
             height: 145px
             font-size: 20px
             color: $colorA
+
             a
               color: $colorA
 

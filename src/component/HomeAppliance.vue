@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-08 20:12:02
- * @LastEditTime: 2020-07-13 20:32:38
+ * @LastEditTime: 2020-07-13 23:23:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/HomeAppliance.vue

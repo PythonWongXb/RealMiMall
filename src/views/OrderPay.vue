@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:57:58
- * @LastEditTime: 2020-07-12 10:59:07
+ * @LastEditTime: 2020-07-13 22:40:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/OrderPay.vue
@@ -350,125 +350,147 @@ export default {
 
 .orderpay
   .confirm-context
-    background: $colorN
     padding-bottom: 30px
+    background: $colorN
+
     .container
       padding-top: 40px
       padding-bottom: 30px
+
       .confirm-order-box
-        background-color: $colorG
         padding: 50px 50px 20px 50px
+        background-color: $colorG
+
         .order-detail
-          color: $colorB
-          margin-top: 30px
           height: 0
-          overflow: hidden
+          margin-top: 30px
           padding-left: 138px
-          transition: all .5s
           overflow: hidden
-          &.show
-            // height: 200px
+          transition: all .5s
+          color: $colorB
+
           .lable
             display: inline-block
             width: 85px
+
           &>div
-            line-height: 24px
             margin-bottom: 8px
+            line-height: 24px
             font-size: 14px
+
           .suborder-box
             .commodity
               @include flex()
+
               .lable
                 align-self: flex-start
                 width: 85px
+
               .content
                 flex: 1
                 width: 100%
+
                 .each-product
                   .name
                     display: inline-block
                     width: 150px
+
                   .num
                     display: inline-block
                     width: 150px
+
                   .money
                     display: inline-block
                     width: 300px
-            .reciver
+
             .order-num
-              border-top: 1px $colorO solid
               padding-top: 20px
+              border-top: 1px $colorO solid
+
               span
                 &:last-child
                   color: $colorA
+
         .confirm-order
           @include flex()
           box-sizing: content-box
           color: #616161
-          // height: 107px
+
           &>i
+            align-self: flex-start
             font-size: 84px
             color: #83c44e
-            align-self: flex-start
+
           .content
+            align-self: flex-start
             width: 680px
             margin-left: 50px
-            align-self: flex-start
+
             .time
               line-height: 28px
-              font-size: 14px
               margin-bottom: 5px
+              font-size: 14px
+
               span
                 color: $colorA
+
             .title
+              margin-bottom: 10px
+              line-height: 36px
               font-size: 24px
               font-weight: 400
-              line-height: 36px
               color: $colorM
-              margin-bottom: 10px
+
             .info
               line-height: 28px
               font-size: 14px
+
           .sum
+            align-self: flex-start
             flex: 1
             text-align: right
-            align-self: flex-start
 
             .money
-              font-size: 14px
               margin-bottom: 10px
+              font-size: 14px
+
               span
+                line-height: 36px
                 font-size: 24px
                 font-weight: 400
-                line-height: 36px
                 color: $colorA
+
               i
-                color: $colorA
                 font-size: 14px
+                color: $colorA
+
             .detail
               font-size: 14px
               cursor: pointer
+
               &:hover
                 color: $colorA
+
             .detail::after
               content: '\e65b'
-              font-weight: 800
               margin-left: 5px
+              font-weight: 800
 
       .confirm-pay
         padding: 30px 48px 44px 48px
-        background: $colorG
         margin-top: 30px
+        background: $colorG
+
         .head
           height: 50px
           margin-bottom: 30px
-          border-bottom: 1px solid #e0e0e0
           font-size: 18px
+          border-bottom: 1px solid #e0e0e0
           color: #424242
-        .body
 
       .confirm-install-content
-        background: $colorG
-        margin-top: 30px
         padding: 30px 48px 20px 48px
+        margin-top: 30px
+        background: $colorG
+
 </style>

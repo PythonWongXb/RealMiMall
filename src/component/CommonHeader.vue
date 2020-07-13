@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:28:32
- * @LastEditTime: 2020-07-13 19:57:35
+ * @LastEditTime: 2020-07-13 23:21:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/Header.vue
@@ -168,8 +168,10 @@ export default {
             padding: 0 5px
             color: $colorB
             cursor: pointer
+
             &:hover
               color: $colorA
+
             &:hover ~ .subtitle
               height: 200px
               border-top: 1px $colorO solid
@@ -206,6 +208,7 @@ export default {
               font-size: 12px
               color: $colorM
               cursor: pointer
+
               &:hover
                 background: $colorO
 
@@ -232,11 +235,14 @@ export default {
           border: 1px $colorO solid
           border-left: none
           cursor: pointer
+
           &.select-icon
             border: 1px $colorA solid
             border-left: none
+
           &:hover
             background-color: $colorA
             color: $colorG
             border: 1px $colorA solid
+
 </style>

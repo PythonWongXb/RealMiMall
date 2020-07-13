@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-11 14:37:40
- * @LastEditTime: 2020-07-13 20:10:09
+ * @LastEditTime: 2020-07-13 23:22:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachPaybox.vue
@@ -92,12 +92,16 @@ export default {
       margin-top: 14px
       border: 1px solid #ccc
       cursor: pointer
+
       &:not(:nth-child(n + 7))
         margin-top: 0
+
       &:not(:nth-child(6n))
         margin-right: 14px
+
       &:hover
         border-color: red
+
       &.choose
         border-color: red
 
@@ -115,6 +119,7 @@ export default {
       border: 1px solid #ccc
       color: #424242
       cursor: pointer
+
       &:hover
         border-color: red
 </style>

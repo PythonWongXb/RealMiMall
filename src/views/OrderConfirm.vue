@@ -275,23 +275,27 @@ export default {
 <style lang="sass" scoped>
 @import './../assets/sass/base'
 @import './../assets/sass/button'
+
 .order-confirm
   .wrapper
-    background-color: #f5f5f5
     padding-top: 30px
     padding-bottom: 84px
+    background-color: #f5f5f5
+
     .order-box
-      background-color: #ffffff
       padding-left: 40px
       padding-bottom: 40px
+      background-color: #ffffff
+
       .addr-title
-        font-size: 20px
-        color: #333333
-        font-weight: 200
         margin-bottom: 21px
+        font-size: 20px
+        font-weight: 200
+        color: #333333
 
       .item-address
         padding-top: 38px
+
         .addr-list
           display: flex
           flex-wrap: wrap
@@ -299,44 +303,46 @@ export default {
 
           .addr-info,
           .addr-add
-            box-sizing: border-box
-            width: 271px
             height: 180px
-            border: 1px solid #e5e5e5
-            margin-right: 15px
+            width: 271px
             padding: 15px 24px
+            margin-right: 15px
             font-size: 14px
+            border: 1px solid #e5e5e5
             color: #757575
 
           .addr-info
-            cursor: pointer
             width: calc(25% - 12px)
             margin-bottom: 15px
+            cursor: pointer
+
             &:nth-child(4n)
               margin-right: 0
 
             h2
               height: 27px
+              margin-bottom: 10px
               font-size: 18px
               font-weight: 300
               color: #333
-              margin-bottom: 10px
 
             .street
               height: 50px
 
             .action
-              height: 50px
-              line-height: 50px
               display: flex
-              width: 100%
               justify-content: space-between
               align-items: center
+              height: 50px
+              width: 100%
+              line-height: 50px
+
               .icon
-                width: 20px
                 height: 20px
+                width: 20px
                 fill: #666666
                 vertical-align: middle
+
                 &:hover
                   fill: #ff6700
 
@@ -344,42 +350,46 @@ export default {
               border: 1px solid #ff6700
 
           .addr-add
+            width: calc(25% - 12px)
+            margin-right: 0
             text-align: center
             color: #999999
             cursor: pointer
-            width: calc(25% - 12px)
-            margin-right: 0
+
             .icon-add
-              width: 30px
               height: 30px
+              width: 30px
               border-radius: 50%
-              background: url('/imgs/icon-add.png') #e0e0e0 no-repeat center
-              background-size: 14px
               margin: 0 auto
               margin-top: 45px
+              background: url('/imgs/icon-add.png') #e0e0e0 no-repeat center
+              background-size: 14px
               margin-bottom: 10px
 
       .item-good
         margin-top: 34px
         border-bottom: 1px solid #e5e5e5
         padding-bottom: 12px
+
         h2
-          border-bottom: 1px solid #e5e5e5
           padding-bottom: 5px
+          border-bottom: 1px solid #e5e5e5
 
         li
           display: flex
           align-items: center
           height: 40px
-          line-height: 40px
           margin-top: 10px
+          line-height: 40px
           font-size: 16px
           color: #333333
+
           .good-name
             flex: 5
+
             img
-              width: 30px
               height: 30px
+              width: 30px
               vertical-align: middle
 
           .good-price
@@ -393,6 +403,7 @@ export default {
       .item-invoice
         margin-top: 31px
         line-height: 20px
+
         h2
           display: inline-block
           margin-right: 71px
@@ -401,22 +412,23 @@ export default {
 
         span,
         a
+          margin-right: 23px
           font-size: 16px
           color: #ff6700
-          margin-right: 23px
 
       .detail
         padding: 50px 44px 33px 0
-        border-bottom: 1px solid #f5f5f5
         text-align: right
         font-size: 16px
+        border-bottom: 1px solid #f5f5f5
         color: #666666
+
         .item-val
           color: #ff6700
 
         .item
-          line-height: 15px
           margin-bottom: 12px
+          line-height: 15px
 
         .item-val
           display: inline-block
@@ -432,23 +444,26 @@ export default {
 
   .edit-wrap
     font-size: 14px
+
     .item
       margin-bottom: 15px
       .input
+
         display: inline-block
-        width: 283px
         height: 40px
+        width: 283px
         line-height: 40px
         padding-left: 15px
         border: 1px solid #e5e5e5
+
         & + .input
           margin-left: 14px
 
       select
         height: 40px
+        margin-right: 15px
         line-height: 40px
         border: 1px solid #e5e5e5
-        margin-right: 15px
 
       textarea
         height: 62px

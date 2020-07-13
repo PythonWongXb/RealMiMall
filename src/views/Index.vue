@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:53:27
- * @LastEditTime: 2020-07-13 16:43:35
+ * @LastEditTime: 2020-07-13 21:56:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/index.vue
@@ -772,58 +772,66 @@ export default {
   .banner-adv
     padding: 22px 0
     box-sizing: content-box
+
   .swiper
     height: 460px
+
     .container
       position: relative
       height: 460px
+
       .swiper
-        .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
-          width: auto
+        .swiper-pagination-bullets
           position: absolute
           right: 30px
+          width: auto
           left: auto
+
         .swiper-container
-          width: 100%
           height: 100%
+          width: 100%
+
         .swiper-button-next
+          top: calc(50% - 35px)
+          right: 0
+          z-index: 2
           height: 69px
           width: 41px
           line-height: 69px
           text-align: center
-          top: calc(50% - 35px)
-          right: 0
-          z-index: 2
+          border-radius: 5px 0 0 5px
           outline: none
           --swiper-navigation-size: 20px
           --swiper-navigation-color: #ccc
-          border-radius: 5px 0 0 5px
+
           &:hover
             background: rgba(0,0,0,.4)
 
         .swiper-button-prev
+          top: calc(50% - 35px)
+          left: 234px
+          z-index: 2
           height: 69px
           width: 41px
           line-height: 69px
           text-align: center
-          top: calc(50% - 35px)
-          left: 234px
-          z-index: 2
+          border-radius: 0 5px 5px 0
           outline: none
           --swiper-navigation-size: 20px
           --swiper-navigation-color: #ccc
-          border-radius: 0 5px 5px 0
 
           &:hover
             background: rgba(0,0,0,.4)
+
       .submenu
         position: absolute
         top: 0
         left: 0
+        @include flexc()
+        z-index: 2
         height: 100%
         width: 234px
-        background: rgba(105,101,101,.6)
-        z-index: 2
-        @include flexc()
         padding: 20px 0
+        background: rgba(105,101,101,.6)
+
 </style>

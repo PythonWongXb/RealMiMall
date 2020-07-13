@@ -228,6 +228,7 @@ export default {
               flex: 4.5
               display: flex
               align-items: center
+
               .active1
                   background-color: pink
 
@@ -253,12 +254,14 @@ export default {
               align-items: center
               justify-content: center
               flex: 1.5
+
               .reduce
                 height: 30px
                 width: 40px
                 background-color: #ccc
                 line-height: 30px
                 cursor: pointer
+
                 &:hover
                   color: #fff
 
@@ -268,6 +271,7 @@ export default {
                 background-color: #ccc
                 line-height: 30px
                 cursor: pointer
+
                 &:hover
                   color: #fff
 
@@ -299,6 +303,7 @@ export default {
           height: 60px
           border: 1px #f2f2f2 solid
           margin-bottom: 50px
+
           .lf
             display: flex
             align-items: center
@@ -339,6 +344,7 @@ export default {
               color: #fff
               margin-left: 20px
               cursor: pointer
+
               &:hover
                 color: #af3145
 

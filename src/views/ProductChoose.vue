@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:57:18
- * @LastEditTime: 2020-07-13 15:09:45
+ * @LastEditTime: 2020-07-13 23:02:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/ProductChoose.vue
@@ -162,54 +162,65 @@ export default {
 .product-choose
   .body
     padding-bottom: 30px
+
     .container
-      padding-top: 32px
       @include flex()
       align-items: flex-start
+      padding-top: 32px
+
       .infos
         flex: 1
         padding-left: 30px
         font-size: 14px
+
         .title
           font-size: 24px
           font-weight: 400
           color: #212121
+
         .detailinfo
-          color: #b0b0b0
-          margin: 0
-          padding: 0
-          padding-top: 8px
           line-height: 1.5
+          padding-top: 8px
+          color: #b0b0b0
+
         .xiaomi
-          color: $colorA
           margin-top: 14px
+          color: $colorA
+
         .address-box
           margin: 20px 0
+
           .address
-            padding: 30px 50px
             position: relative
-            background: #fafafa
+            padding: 30px 50px
             border: 1px solid #e0e0e0
+            background: #fafafa
+
         .price
-          font-size: 18px
           line-height: 1
-          color: #ff6700
           padding: 12px 0 10px
+          font-size: 18px
+          color: #ff6700
+
         .line
           margin-top: 12px
           border-bottom: 1px solid #e0e0e0
+
         .sum
           padding: 30px
           background: #f9f9fa
+
           .choose
+            @include flex()
             line-height: 30px
             font-size: 14px
-            @include flex()
+
           .summoney
-            font-size: 24px
             line-height: 32px
+            font-size: 24px
             padding-top: 20px
             color: $colorA
+
     .info
       .container
         display: flex
@@ -219,24 +230,28 @@ export default {
           @include flex()
           justify-content: flex-start
           width: 536px
+
         .like
           margin-left: 20px
           height: 54px
           width: 142px
+          line-height: 54px
+          margin-right: 30px
+          text-align: center
           background: $colorL
           color: $colorG
-          text-align: center
-          line-height: 54px
           cursor: pointer
-          margin-right: 30px
+
           i::before
             margin-right: 5px
+
         .cart
           height: 54px
           width: 300px
+          line-height: 54px
+          text-align: center
           background-color: $colorA
           color: $colorG
-          text-align: center
-          line-height: 54px
           cursor: pointer
+
 </style>

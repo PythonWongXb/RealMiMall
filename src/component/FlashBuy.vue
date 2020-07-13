@@ -400,6 +400,7 @@ export default {
           background-color: $colorN
           border: 1px solid $colorL
           outline: none
+
           &:hover
             color: $colorA
 
@@ -418,6 +419,7 @@ export default {
           --swiper-navigation-color: $coloA
           --swiper-navigation-size: 10px
           outline: none
+
           &:hover
             color: $colorA
   </style>

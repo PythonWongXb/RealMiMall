@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 09:51:08
- * @LastEditTime: 2020-07-13 20:22:05
+ * @LastEditTime: 2020-07-13 23:23:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachVideo.vue
@@ -53,15 +53,19 @@ export default {
   background: $colorG
   transition: transform .5s
   cursor: pointer
+
   &:nth-child(4n)
     margin-right: 0
+
   &:hover
     transform: translateY(-5px)
     @include shadow()
+
   .topimg
     position: relative
     height: 180px
     margin-bottom: 28px
+
     &:hover
       span
         background: $colorA

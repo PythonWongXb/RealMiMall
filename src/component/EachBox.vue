@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 15:48:20
- * @LastEditTime: 2020-07-13 09:43:56
+ * @LastEditTime: 2020-07-13 23:22:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachBox.vue
@@ -52,6 +52,7 @@ export default {
     padding-left: 30px
     line-height: 42px
     color: $colorG
+
     &:after
       content: '\e65c'
       position: absolute
@@ -79,6 +80,7 @@ export default {
         font-size: 14px
         color: $colorB
         cursor: pointer
+
         &:hover
           color: $colorA
 
