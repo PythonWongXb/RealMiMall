@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-13 15:33:11
+ * @LastEditTime: 2020-07-13 15:36:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -119,7 +119,7 @@ export default {
       this.showDetails()
       setTimeout(() => {
         this.loading = true
-      }, 20)
+      }, 500)
     })
     this.$refs.cartBox.addEventListener('mouseout', () => {
       if (this.loading) {
