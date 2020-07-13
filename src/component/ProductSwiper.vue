@@ -1,13 +1,17 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-10 23:18:27
+ * @LastEditTime: 2020-07-13 10:16:54
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /realmimall/src/component/ProductSwiper.vue
+-->
 <template>
 <div class='swiper-box'>
   <swiper class="swiper" :options="swiperOption">
-    <swiper-slide><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2140013030,314739014&fm=26&gp=0.jpg" alt=""></swiper-slide>
-    <swiper-slide><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2140013030,314739014&fm=26&gp=0.jpg" alt=""></swiper-slide>
-    <swiper-slide><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2140013030,314739014&fm=26&gp=0.jpg" alt=""></swiper-slide>
-    <swiper-slide><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2140013030,314739014&fm=26&gp=0.jpg" alt=""></swiper-slide>
-    <swiper-slide><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2140013030,314739014&fm=26&gp=0.jpg" alt=""></swiper-slide>
-    <swiper-slide><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2140013030,314739014&fm=26&gp=0.jpg" alt=""></swiper-slide>
-    <swiper-slide><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2140013030,314739014&fm=26&gp=0.jpg" alt=""></swiper-slide>
+    <swiper-slide v-for="item in num" :key="item.id">
+      <img :src="phone" alt="">
+    </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
     <div class="swiper-button-prev" slot="button-prev"></div>
     <div class="swiper-button-next" slot="button-next"></div>
@@ -21,6 +25,9 @@ import 'swiper/css/swiper.css'
 
 export default {
   name: 'swiper-example-loop',
+  props: {
+    phone: String
+  },
   title: 'Loop mode / Infinite loop',
   components: {
     Swiper,
@@ -28,6 +35,7 @@ export default {
   },
   data () {
     return {
+      num: 4,
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -54,27 +62,43 @@ export default {
 .swiper-box
   width: 560px
   .swiper-container
-    // width: 560px
     img
-      height: 100%
+      height: auto
       width: 100%
     .swiper-pagination-bullet
-      height: 30px
-      width: 30px
-      background-color: red
-      .my-bullet
-        display: block
-        height: 20px
-        width: 20px
-        color: red
+      background: #ccc
+      width: 50px
+      border-radius: 0
+      border: 0
+      height: 3px
+      &:hover
+        opacity: 1
     .swiper-wrapper
       height: 100%
       width: 100%
+    .swiper-button-next
+      border-radius: 3px 0 0 3px
+    .swiper-button-prev
+      border-radius: 0 3px 3px 0
+    .swiper-button-next,
+    .swiper-button-prev
+      &:hover
+        background: rgba(0, 0, 0, .5)
+      width: 41px
+      height: 69px
+    .swiper-button-next::after,
     .swiper-button-prev::after
-      color: red
+
+      display: block
+      color: #ccc
       font-size: 12px
+      line-height: 69px
+      text-align: center
+      font-size: 30px
     .swiper-slide
-      height: 100%
+      height: 560px
       width: 100%
       margin-right: 0
+      @include flex()
+      justify-content: center
 </style>

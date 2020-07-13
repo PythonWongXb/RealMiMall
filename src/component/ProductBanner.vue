@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-10 09:24:33
- * @LastEditTime: 2020-07-10 17:59:21
+ * @LastEditTime: 2020-07-13 14:25:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/ProductBanner.vue
@@ -77,7 +77,7 @@ export default {
   props: {
     model: Number,
     name: String,
-    productId: String
+    productId: Number
   },
   mounted () {
     window.addEventListener('scroll', this.page)

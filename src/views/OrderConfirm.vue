@@ -425,7 +425,7 @@ export default {
 
         .item-val
           display: inline-block
-          width: 100px
+          width: 150px
 
         .item-total
           .item-val

@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-05 13:47:03
- * @LastEditTime: 2020-07-12 10:19:57
- * @LastEditors: your name
+ * @LastEditTime: 2020-07-13 09:34:28
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/ScanPayCode.vue
 -->
@@ -33,7 +33,9 @@
 <script>
 export default {
   name: 'scan-pay-code',
-  props: ['img'],
+  props: {
+    img: String
+  },
   methods: {
     close () {
       this.$emit('close')
