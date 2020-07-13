@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 09:04:55
- * @LastEditTime: 2020-07-09 10:54:12
+ * @LastEditTime: 2020-07-13 21:02:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/Video.vue
@@ -35,39 +35,44 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .video
-  background-color: $colorN
   padding-bottom: 20px
+  background-color: $colorN
+
   .container
     .body
-      height: 285px
-      width: 100%
       display: flex
       flex-wrap: wrap
+      height: 285px
+      width: 100%
 
     .head
-      width: 100%
       @include flex()
-      .head-index-title
+      width: 100%
+
       .more
-        font-size: 16px
         line-height: 58px
         color: #424242
-        -webkit-transition: all .4s
+        font-size: 16px
         transition: all .4s
         cursor: pointer
+
         &:hover
           color: $colorA
+
           i::after
-            color: $colorG
             background: $colorA
+            color: $colorG
+
         i
           &::after
             content: '\e65c'
-            margin-left: 5px
             height: 20px
             width: 20px
+            margin-left: 5px
+            border-radius: 50%
             background: $colorL
             color: $colorG
-            border-radius: 50%
+
 </style>

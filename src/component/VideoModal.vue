@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 11:37:23
- * @LastEditTime: 2020-07-13 17:39:36
+ * @LastEditTime: 2020-07-13 21:04:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/VideoModal.vue
@@ -14,7 +14,7 @@
       @click="closeVideo"
       ></div>
       <div class="video">
-        <div class="close-icon iconfont" @click="closeVideo">{{title}}</div>
+        <div class="close-icon iconfont" @click="closeVideo">{{ title }}</div>
         <video controls="controls" autoplay :src="src"></video>
       </div>
     </div>
@@ -58,6 +58,7 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .video-modal
   height: 100%
 

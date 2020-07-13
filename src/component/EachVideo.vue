@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 09:51:08
- * @LastEditTime: 2020-07-09 15:04:06
+ * @LastEditTime: 2020-07-13 20:22:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachVideo.vue
@@ -10,7 +10,9 @@
   <div class="each-video">
     <div class="topimg" @click="EmitChange">
       <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/101b19aca4bb489bcef0f503e44ec866.jpg?thumb=1&w=296&h=180&f=webp&q=90" title="点击播放视频" />
-      <span><i></i></span>
+      <span>
+        <i></i>
+      </span>
     </div>
     <div class="title">
       {{ title }}
@@ -42,12 +44,13 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .each-video
   height: 285px
-  text-align: center
   width: calc(25% - 10.5px)
-  background: $colorG
   margin-right: 14px
+  text-align: center
+  background: $colorG
   transition: transform .5s
   cursor: pointer
   &:nth-child(4n)
@@ -56,32 +59,33 @@ export default {
     transform: translateY(-5px)
     @include shadow()
   .topimg
-    height: 180px
     position: relative
+    height: 180px
     margin-bottom: 28px
     &:hover
       span
         background: $colorA
         i
           color: $colorG
+
     span
       position: absolute
       left: 20px
       bottom: 10px
+      display: flex
+      align-items: center
+      justify-content: center
       width: 32px
       height: 20px
       border: 2px solid #fff
       border-radius: 12px
-      background-color: #424242
       background-color: rgba(0,0,0,.6)
       color: #fff
-      -webkit-transition: all .2s
       transition: all .2s
-      display: flex
-      align-items: center
-      justify-content: center
+
       i
         line-height: 20px
+
       i:after
         content: '\e665'
         line-height: 20px
@@ -89,6 +93,7 @@ export default {
     img
       height: 100%
       width: 100%
+
   .title
     margin: 0 14px 6px
     font-size: 14px
@@ -98,6 +103,7 @@ export default {
     white-space: nowrap
     text-overflow: ellipsis
     overflow: hidden
+
   .desc
     height: 18px
     margin: 0 14px
@@ -106,4 +112,5 @@ export default {
     white-space: nowrap
     text-overflow: ellipsis
     overflow: hidden
+
 </style>

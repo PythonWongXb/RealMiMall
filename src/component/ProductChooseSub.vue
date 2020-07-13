@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-13 10:24:03
- * @LastEditTime: 2020-07-13 14:35:46
+ * @LastEditTime: 2020-07-13 20:47:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/ProductChoose.vue
@@ -46,28 +46,35 @@ export default {
 
 .product-choose
   margin-bottom: 30px
+
   .title
-    font-size: 18px
-    line-height: 27px
-    color: #333
     margin-bottom: 10px
+    line-height: 27px
+    font-size: 18px
+    color: #333
+
   .details
     display: flex
     flex-wrap: wrap
+
     .choice
       height: 42px
       width: calc( 50% - 5px)
-      border: 1px #ccc solid
       margin-right: 10px
-      text-align: center
       line-height: 42px
+      text-align: center
+      border: 1px #ccc solid
       cursor: pointer
+
       &.current
         border-color: $colorA
+
       &:nth-child(2n)
         margin-right: 0
+
       &:nth-child(n + 3)
         margin-top: 10px
+
       &:hover
         border-color: $colorA
 

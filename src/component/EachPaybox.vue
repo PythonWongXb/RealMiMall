@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-11 14:37:40
- * @LastEditTime: 2020-07-12 10:52:13
+ * @LastEditTime: 2020-07-13 20:10:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/EachPaybox.vue
@@ -15,11 +15,11 @@
         v-for="(item, index) in list"
         :key="item.id"
         @click="change(index)"
-        :class="{'choose':choose===index && fatherchoose===1}"
+        :class="{'choose':choose === index && fatherchoose === 1}"
       >
-        <img :src="item.img" alt />
+        <img :src="item.img" />
       </div>
-      <div v-if="more===1" @click="mores" class="more">{{ contentnew }} </div>
+      <div v-if="more === 1" @click="mores" class="more">{{ contentnew }} </div>
     </div>
   </div>
 </template>
@@ -78,17 +78,20 @@ export default {
 .each-box
   &>div
     margin-bottom: 30px
+
   .payment-head
     margin-bottom: 15px
+
   .payment-body
     display: flex
     flex-wrap: wrap
+
     .each
       height: 60px
       width: calc(16.6% - 11.7px)
+      margin-top: 14px
       border: 1px solid #ccc
       cursor: pointer
-      margin-top: 14px
       &:not(:nth-child(n + 7))
         margin-top: 0
       &:not(:nth-child(6n))
@@ -97,19 +100,21 @@ export default {
         border-color: red
       &.choose
         border-color: red
+
       img
         height: 100%
         width: 100%
+
     .more
       height: 60px
       width: calc(16.6% - 11.7px)
-      border: 1px solid #ccc
-      cursor: pointer
-      text-align: center
+      margin-top: 14px
       line-height: 60px
       font-size: 14px
+      text-align: center
+      border: 1px solid #ccc
       color: #424242
-      margin-top: 14px
+      cursor: pointer
       &:hover
         border-color: red
 </style>

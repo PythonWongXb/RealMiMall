@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 10:38:41
- * @LastEditTime: 2020-07-09 16:05:03
+ * @LastEditTime: 2020-07-13 18:17:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mimall/src/components/NavFooter.vue
@@ -261,39 +261,44 @@ export default {
     .container
       padding-top: 40px
       border-top: 1px solid #e0e0e0
+
       .footer-links
         @include flex()
         width: 100%
+
         .col-left
           @include flex()
           align-items: flex-start
           flex: 1
           margin-right: 120px
+
           dt
             margin-bottom: 26px
 
           dd
-            color: #757575
-            font-size: 12px
-            line-height: 12px
             margin-top: 10px
+            line-height: 12px
+            font-size: 12px
+            color: #757575
+
             a
               text-decoration: none
               color: #757575
 
       .col-contact
+        @include flexc()
         width: 252px
         height: 111px
         border-left: 1px solid #e0e0e0
-        @include flexc()
+
         .phone
-          color: $colorA
           font-size: 22px
+          color: $colorA
 
         .time
-          color: #616161
-          font-size: 12px
           line-height: 12px
+          font-size: 12px
+          color: #616161
 
         .people
           @include flex()
@@ -301,11 +306,12 @@ export default {
           width: 120px
           height: 30px
           line-height: 30px
+          font-size: 14px
           text-align: center
           border: 1px solid $colorA
           color: $colorA
           cursor: pointer
-          font-size: 14px
+
           span
             margin-right: 3px
 
@@ -318,11 +324,9 @@ export default {
           width: 120px
           font-size: 12px
           color: $colorP
-          span
-            font-size: 24px
-            line-height: 24px
 
-  .site-info
-    .container
+          span
+            line-height: 24px
+            font-size: 24px
 
 </style>

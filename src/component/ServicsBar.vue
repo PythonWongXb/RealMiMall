@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-30 21:32:17
- * @LastEditTime: 2020-07-09 11:15:51
+ * @LastEditTime: 2020-07-13 20:52:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mimall/src/components/ServicsBar.vue
@@ -50,30 +50,31 @@ export default {
     color: #616161
 
   .container
-    height: 80px
     @include flex()
+    height: 80px
+
     div
-      flex: 1
-      text-align: center
-      vertical-align: middle
-      font-size: 16px
-      color: #616161
-      line-height: 12px
       @include flex()
       justify-content: center
+      flex: 1
+      line-height: 12px
+      font-size: 16px
+      text-align: center
+      vertical-align: middle
+      color: #616161
       cursor: pointer
 
       &:hover
-        color: #ff6700
         transition: .2s all
+        color: #ff6700
 
       &:hover a
-        color: #ff6700
         transition: .5s all
+        color: #ff6700
 
     span[class*='iconfont']
-      font-size: 22px
       margin-right: 6px
       line-height: 22px
+      font-size: 22px
 
 </style>

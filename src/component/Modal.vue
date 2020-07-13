@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-01 21:07:07
- * @LastEditTime: 2020-07-10 21:49:35
+ * @LastEditTime: 2020-07-13 20:33:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mimall/src/components/Modal.vue

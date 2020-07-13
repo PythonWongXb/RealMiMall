@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-08 10:51:56
- * @LastEditTime: 2020-07-08 20:03:13
+ * @LastEditTime: 2020-07-13 18:07:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/BannerAdv.vue
@@ -9,7 +9,7 @@
 <template>
   <div class="banner-adv">
     <div class="container">
-      <img :src="src" alt="">
+      <img :src="src" />
     </div>
   </div>
 </template>
@@ -30,6 +30,7 @@ export default {
 @import '../assets/sass/config'
 .banner-adv
   background-color: $colorN
+
   .container
     height: 100%
 </style>

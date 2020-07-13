@@ -10,7 +10,7 @@
 <div class='swiper-box'>
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide v-for="item in num" :key="item.id">
-      <img :src="phone" alt="">
+      <img :src="phone" />
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
     <div class="swiper-button-prev" slot="button-prev"></div>
@@ -60,46 +60,56 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .swiper-box
   width: 560px
+
   .swiper-container
     img
       height: auto
       width: 100%
+
     .swiper-pagination-bullet
-      background: #ccc
-      width: 50px
-      border-radius: 0
-      border: 0
       height: 3px
+      width: 50px
+      border: 0
+      border-radius: 0
+      background: #ccc
+
       &:hover
         opacity: 1
+
     .swiper-wrapper
       height: 100%
       width: 100%
+
     .swiper-button-next
       border-radius: 3px 0 0 3px
+
     .swiper-button-prev
       border-radius: 0 3px 3px 0
+
     .swiper-button-next,
     .swiper-button-prev
+      height: 69px
+      width: 41px
+
       &:hover
         background: rgba(0,0,0,.5)
-      width: 41px
-      height: 69px
+
     .swiper-button-next::after,
     .swiper-button-prev::after
-
       display: block
-      color: #ccc
-      font-size: 12px
       line-height: 69px
       text-align: center
       font-size: 30px
+      color: #ccc
+
     .swiper-slide
+      @include flex()
+      justify-content: center
       height: 560px
       width: 100%
       margin-right: 0
-      @include flex()
-      justify-content: center
+
 </style>

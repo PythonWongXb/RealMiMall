@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:28:32
- * @LastEditTime: 2020-07-09 16:34:22
+ * @LastEditTime: 2020-07-13 19:57:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/Header.vue
@@ -32,7 +32,7 @@
                   <div v-for="item in phones" :key="item.id" class='eachSubmenu'>
                     <img :src="item.src" />
                     <div>{{ item.title }}</div>
-                    <div class="">{{ item.money }}</div>
+                    <div >{{ item.money }}</div>
                   </div>
                 </div>
               </div>
@@ -43,14 +43,14 @@
           <i class='icon-sou_suo' :class="{'select-icon': selectIcon}"></i>
           <div class="subsearch" :class="{'select-sub': selectSub}" v-if="selectSub">
             <div class="sub-box">
-              <div class="">品牌1</div>
-              <div class="">品牌2</div>
-              <div class="">品牌3</div>
-              <div class="">品牌4</div>
-              <div class="">品牌5</div>
-              <div class="">品牌6</div>
-              <div class="">品牌7</div>
-              <div class="">品牌8</div>
+              <div >品牌1</div>
+              <div >品牌2</div>
+              <div >品牌3</div>
+              <div >品牌4</div>
+              <div >品牌5</div>
+              <div >品牌6</div>
+              <div >品牌7</div>
+              <div >品牌8</div>
             </div>
           </div>
         </div>
@@ -126,43 +126,44 @@ export default {
 @import '../assets/sass/mixin'
 
 .commonHeader
-  // border-bottom: 1px $colorO solid
   .container
     .header-box
-      height: 100px
       @include flex()
-      .header-logo
+      height: 100px
+
       .header-body
-        height: 100%
-        flex: 1
         display: flex
         align-items: center
+        flex: 1
+        height: 100%
         margin-left: 70px
+
         .body-box
           position: relative
-          width:700px
-          height: 100%
           display: flex
           align-items: center
+          height: 100%
+          width:700px
           .subtitle
-            box-sizing: content-box
             position: fixed
+            top: 140px
+            left: 0
+            height: 0
+            @include flex()
+            z-index: 11
             overflow: hidden
+            background: $colorG
+            width: 100%
             transition-property: height opacity
             transition-duration: .5s
-            background: $colorG
-            height: 0
-            width: 100%
-            left: 0
-            top: 140px
-            z-index: 11
             @include shadow()
-            // border-top: 1px transparent solid
-            @include flex()
+
             .container
               @include flex()
+
               .eachSubmenu
                 @include flexc()
+
           .info-box
             padding: 0 5px
             color: $colorB
@@ -172,22 +173,25 @@ export default {
             &:hover ~ .subtitle
               height: 200px
               border-top: 1px $colorO solid
+
           .slot
             width: 120px
             height: 100%
+
       .header-search
+        position: relative
+        @include flex()
+        z-index: 2
         width:296px
         height: 100%
-        @include flex()
-        position: relative
-        z-index: 2
+
         .subsearch
           position: absolute
+          top: calc(100% - 25px)
           height:241px
           width: 244px
-          border: 1px $colorO solid
           border-top: none
-          top: calc(100% - 25px)
+          border: 1px $colorO solid
 
           .sub-box
             @include flexc()
@@ -195,8 +199,8 @@ export default {
             background-color: $colorG
 
             div
-              width: 100%
               flex: 1
+              width: 100%
               line-height: 30px
               padding-left: 10px
               font-size: 12px
@@ -204,24 +208,27 @@ export default {
               cursor: pointer
               &:hover
                 background: $colorO
+
           &.select-sub
             border: 1px $colorA solid
             border-top: none
+
         input
           width:244px
-          outline: none
-          border: 1px solid $colorO
           height: 50px
           text-indent: 10px
+          border: 1px solid $colorO
+          outline: none
+
           &.select-input
             border: 1px red solid
 
         i
-          color: $colorP
           height: 50px
           width: 52px
           text-align: center
           line-height: 50px
+          color: $colorP
           border: 1px $colorO solid
           border-left: none
           cursor: pointer

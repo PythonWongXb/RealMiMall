@@ -12,7 +12,7 @@
     <div class="sub">
       <div class='subOne' v-for="item in menuList" :key="item.id">
         <div class='subTwo' v-for="eachItem in item" :key="eachItem.id">
-          <a href=""><img :src="eachItem ? eachItem.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" alt=""></a>
+          <a href=""><img :src="eachItem ? eachItem.img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d12361002299529816e7e0a6b74e0a25.jpg?thumb=1&w=40&h=40&f=webp&q=90'" /></a>
           <div>{{eachItem ? eachItem.name: '无名'}}
           </div>
         </div>
@@ -44,38 +44,40 @@ export default {
   &:hover
     .sub
       display: flex
-  .title
-    display: flex
-    padding-left: 30px
-    color: $colorG
-    line-height: 42px
-    width: calc(100% - 20px)
 
+  .title
     position: relative
-    &::after
+    display: flex
+    width: calc(100% - 20px)
+    padding-left: 30px
+    line-height: 42px
+    color: $colorG
+    &:after
       content: '\e65c'
       position: absolute
       right: 0
 
   .sub
+    display: none
     position: absolute
     left: 234px
     top: 0
+    z-index: 2
     height: 460px
     background-color: $colorG
-    z-index: 2
-    display: none
     @include shadow()
+
     .subOne
       height: 460px
+
       .subTwo
-        height: calc(76.66px)
-        width: 223px
         @include flex()
         justify-content: flex-start
+        height: calc(76.66px)
+        width: 223px
         padding-left: 20px
-        color: $colorB
         font-size: 14px
+        color: $colorB
         cursor: pointer
         &:hover
           color: $colorA

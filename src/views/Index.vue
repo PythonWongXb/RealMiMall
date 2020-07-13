@@ -12,7 +12,7 @@
       <div class="container">
         <div class="swiper">
           <swiper ref="mySwiper" :options="swiperOptions">
-            <swiper-slide v-for="item in swiperData" :key="item.page"><a href=""><img :src="item.img" alt=""></a></swiper-slide>
+            <swiper-slide v-for="item in swiperData" :key="item.page"><a href=""><img :src="item.img" /></a></swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
           </swiper>
           <div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->

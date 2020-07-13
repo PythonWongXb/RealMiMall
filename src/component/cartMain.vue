@@ -181,9 +181,7 @@ export default {
     text-align: center
 
   .container
-
     .body
-
       .list
         .hd
           display: flex

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-08 20:12:02
- * @LastEditTime: 2020-07-08 23:12:49
+ * @LastEditTime: 2020-07-13 20:32:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/HomeAppliance.vue
@@ -19,7 +19,7 @@
       <div class="body">
         <div class="left-part">
           <div v-for="item in adv" :key="item.id">
-            <img :src="item.img" alt="">
+            <img :src="item.img" />
           </div>
         </div>
         <div class="right-part">
@@ -61,40 +61,48 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .homeappliance
   background: $colorN
+
   .container
     .body
-      height: 614px
       @include flex()
+      height: 614px
+
       .left-part
         @include flexc()
         height: 100%
+
         div
-          cursor: pointer
           height: 300px
+          cursor: pointer
           transition: all .5s
+
           &:hover
             transform: translateY(-5px)
+
       .right-part
-        // background-color: pink
+        display: flex
+        flex-wrap: wrap
         flex: 1
         height: 100%
         padding-left: 14px
-        display: flex
-        flex-wrap: wrap
 
     .header
       @include flex()
+
       .right-part
         @include flex()
+
         div
           margin-left: 20px
-          color: #424242
+          font-weight: 200
           border-bottom: 2px solid #f5f5f5
+          color: #424242
           transition: border .3s
           cursor: pointer
-          font-weight: 200
+
           &.current
             border-bottom: 2px solid $colorA
             color: $colorA

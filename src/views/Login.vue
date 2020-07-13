@@ -56,7 +56,7 @@
           </div>
           </div>
           <div class="form-qr" v-if="flag===2" >
-            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3185793251,3299269452&fm=26&gp=0.jpg" alt="">
+            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3185793251,3299269452&fm=26&gp=0.jpg" />
           </div>
         </div>
       </div>

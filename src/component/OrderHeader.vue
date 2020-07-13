@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:32:20
- * @LastEditTime: 2020-07-12 11:25:13
+ * @LastEditTime: 2020-07-13 20:36:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/OrderHeader.vue
@@ -66,6 +66,7 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .order-header
   .head
     height: 100px
@@ -73,34 +74,41 @@ export default {
     background: $colorG
     color: $colorL
     border-bottom: 2px solid $colorA
+
     .container
-      height: 100%
       @include flex()
+      height: 100%
+
       .left
         display: flex
         align-items: center
+
         .title
+          margin-left: 43px
+          font-weight: 400
           font-size: 28px
           color: $colorM
-          font-weight: 400
-          margin-left: 43px
+
         .tip
-          margin-left: 20px
           align-self: center
+          margin-left: 20px
+
       .right
+        @include flex()
 
         span
           margin-left: -16px
           margin-right: 16px
-        @include flex()
+
         .my-order
-          cursor: pointer
           height: 40px
           width: 80px
+          padding: 0 5px
+          line-height: 40px
           margin-left: -16px
           text-align: center
-          line-height: 40px
-          padding: 0 5px
+          cursor: pointer
+
           &:hover
             color: $colorA
 </style>

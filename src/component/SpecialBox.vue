@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-08 21:51:54
- * @LastEditTime: 2020-07-08 23:12:23
+ * @LastEditTime: 2020-07-13 20:54:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/SpecialBox.vue
@@ -18,7 +18,7 @@
           </div>
         </div>
 
-      <img :src="info.img" alt="">
+      <img :src="info.img" />
     </div>
     <div class="bottom">
       <div class="left">
@@ -48,57 +48,68 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .special-box
   @include flexc()
   height: 300px
   width: 209px
+
   .top
-    cursor: pointer
-    width: 100%
-    height: calc( 50% - 7px )
-    background-color: $colorG
     @include flex()
+    height: calc( 50% - 7px )
+    width: 100%
+    background-color: $colorG
+    cursor: pointer
     transition: transform .5s
+
     &:hover
-      transform: translateY(-5px)
       @include shadow()
+      transform: translateY(-5px)
+
     img
       height: 80px
       width: 80px
+
     .left
-      height: 100%
-      flex: 1
       @include flexc()
       justify-content: flex-start
+      flex: 1
+      height: 100%
       padding-top: 50px
       padding-left: 30px
       font-size: 14px
+
       .title
         width: 100%
-        color: $colorB
-        line-height: 21px
         margin-bottom: 5px
+        line-height: 21px
+        color: $colorB
+
       .price
         width: 100%
         line-height: 21px
         color: $colorA
-  .bottom
-    cursor: pointer
-    transition: transform .5s
-    &:hover
-      transform: translateY(-5px)
-      @include shadow()
 
+  .bottom
+    @include flex()
     width: 100%
     height: calc( 50% - 7px )
-    background-color: $colorG
-    @include flex()
     padding: 0 30px 0 30px
+    background-color: $colorG
+    cursor: pointer
+    transition: transform .5s
+
+    &:hover
+      @include shadow()
+      transform: translateY(-5px)
+
     .title
       font-size: 18px
       color: #333
+
     small
       color: #757575
+
     i:after
       content: '\e61f'
       font-size: 48px

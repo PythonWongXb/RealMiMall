@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:38:38
- * @LastEditTime: 2020-07-13 16:56:43
+ * @LastEditTime: 2020-07-13 20:57:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/UserIndex.vue
@@ -14,11 +14,11 @@
     </div>
     <div class="bottom">
       <div class="bottom-box">
-        <div class="">个人中心</div>
-        <div class="">晒单评价</div>
-        <div class="">我的喜欢</div>
-        <div class="">小米账户</div>
-        <div @click="logout" class="">退出登录</div>
+        <div >个人中心</div>
+        <div >晒单评价</div>
+        <div >我的喜欢</div>
+        <div >小米账户</div>
+        <div @click="logout" >退出登录</div>
       </div>
     </div>
   </div>
@@ -48,60 +48,70 @@ export default {
 @import '../assets/sass/mixin'
 @import '../assets/sass/base'
 @import '../assets/sass/config'
+
 .userindex
   position: relative
-  width: 110px
   height: 40px
+  width: 110px
+  z-index: 3
   margin-right: 16px
   line-height: 40px
   font-size: 12px
   cursor: pointer
-  z-index: 3
+
   &:hover
     background: $colorG
     color: $colorA
+
   &:hover
     .bottom
       height: 164px
       box-shadow: 1px 3px 3px rgba(0,0,0,.15)
       opacity: 1
+
   .top
     @include flex()
 
     .name
-      padding: 0 5px
       width: 75px
+      padding: 0 5px
       overflow: hidden
       white-space: nowrap
       text-overflow: ellipsis
+
     .icon
       flex: 1
       text-align: center
+
       &::after
         content: '\e65b'
         font-size: bold
+
   .bottom
     position: absolute
-    opacity: 0
-    color: $colorL
     top: 100%
     height: 0
     width: 110px
-    background: $colorG
-    transition: all .4s
-    box-shadow: 1px 0 3px rgba(0,0,0,.15)
     overflow: hidden
+    box-shadow: 1px 0 3px rgba(0,0,0,.15)
+    background: $colorG
+    color: $colorL
+    opacity: 0
+    transition: all .4s
+
     .bottom-box
+      @include flexc()
+      height: 164px
       padding: 7px 0
       text-align: center
-      height: 164px
-      @include flexc()
+
       div
         height:30px
         width: 100%
         line-height: 30px
         color: $colorM
+
         &:hover
-          color: $colorA
           background-color:$colorN
+          color: $colorA
 </style>

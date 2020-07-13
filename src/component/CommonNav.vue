@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-13 15:41:43
+ * @LastEditTime: 2020-07-13 20:03:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -200,120 +200,127 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/config'
 @import url('//at.alicdn.com/t/font_1894585_j1bv0juluw.css')
+
 .commonNav
   background-color: $colorB
+
   .container
     @include flex()
-    color: $colorL
     height: 40px
+    color: $colorL
 
     a
       margin-right: 8px
-      font-size: 12px
       line-height: 40px
+      font-size: 12px
       &:hover
         color: $colorG
 
-    .left-part
     .right-part
       @include flex()
       .cart-box
         position: relative
         display: block
-        margin: 0 0 0 22px
         width: 120px
+        margin: 0 0 0 22px
         background: $colorM
 
-        // &:hover
-        //   .all-order
-        //     height: 120px
         .cart
           @include flex()
           justify-content: center
-
           &:hover
             color: $colorA
             background: $colorG
+
           i
             margin-right: 5px
+
         .all-order
-          background: $colorG
-          color: $colorL
           position: absolute
-          height: 0
-          width:316px
           right: 0
-          text-align: center
-          // line-height: 100px
-          overflow: hidden
-          transition: height .5s
-          @include shadow()
+          height: 0
           z-index: 3
+          width:316px
+          overflow: hidden
+          text-align: center
+          transition: height .5s
+          color: $colorL
+          background: $colorG
+          @include shadow()
           .content
             .all-money
               @include flex()
               padding: 15px 20px
               background: #fafafa
+
               .left
-                width: 100%
                 @include flexc()
+                width: 100%
                 text-align: left
+
                 .top
                   width: 100%
-                  font-size: 12px
-                  line-height: 12px
                   margin-bottom: 5px
+                  line-height: 12px
+                  font-size: 12px
 
                 .bottom
-                  width: 100%
-                  height: 26px
-                  font-size: 12px
-                  line-height: 26px
                   display: flex
-                  flex: 1
                   align-items: flex-end
+                  flex: 1
+                  height: 26px
+                  width: 100%
+                  line-height: 26px
+                  font-size: 12px
                   span
+                    line-height: 26px
                     font-size: 24px
                     color: $colorA
-                    line-height: 26px
                   i
-                    font-size: 12px
                     line-height: 20px
+                    font-size: 12px
                     color: $colorA
 
               .right
-                width: 130px
-                height: 40px
-                background: $colorA
-                color: $colorG
                 flex-shrink: 0
+                height: 40px
+                width: 130px
+                color: $colorG
+                background: $colorA
+
             .none
               height: 100px
               line-height: 100px
               font-size: 14px
               color: #424242
+
             .each
               @include flex()
-              padding: 5px 10px
               justify-content: flex-start
+              padding: 5px 10px
               &:hover
                 i
                   display: block
+
               i
                 display: none
                 &:hover
                   color: red
+
               img
                 height: 20px
                 width: 20px
+
               .name
                 width: 158px
                 overflow: hidden
                 text-overflow:ellipsis
                 white-space: nowrap
                 text-align: left
+
               .price
                 width: 50px
+
               .num
                 width: 50px
 </style>

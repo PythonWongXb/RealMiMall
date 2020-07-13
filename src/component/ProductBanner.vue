@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-10 09:24:33
- * @LastEditTime: 2020-07-13 15:08:20
+ * @LastEditTime: 2020-07-13 20:41:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/ProductBanner.vue
@@ -111,53 +111,64 @@ export default {
 @import '../assets/sass/base'
 @import '../assets/sass/mixin'
 @import '../assets/sass/config'
+
 .product-banner
   .add
     height: 10000px
+
   .xm-product-box
     position: relative
     z-index: 1
-    background: #fff
     border-top: 1px solid #e0e0e0
     border-bottom: 1px solid #e0e0e0
-    -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.07)
     box-shadow: 0 5px 5px rgba(0,0,0,.07)
+    background: #fff
+
     .nav-bar
       position: relative
       height: 63px
       width: 100%
       margin-top: 0
       color: #616161
+
       .container
-        height: 100%
         @include flex()
+        height: 100%
+
         h2
+          line-height: 60px
           font-size: 18px
           font-weight: 400
-          line-height: 60px
           color: #424242
+
         .con
           .right
             @include flex()
+
             a
-              color: #616161
               font-size: 14px
+              color: #616161
+
               &:hover
                 color: $colorA
+
               &.current
                 color: $colorA
+
             .now
               width: 118px
               height: 28px
-              font-size: 12px
+              margin-left: 5px
               line-height: 28px
+              font-size: 12px
               text-align: center
               background: $colorA
               color: $colorG
-              margin-left: 5px
               cursor: pointer
+
               &:hover
                 color: $colorG
+
             span
               margin: 0 7px
               font-size: 12px
@@ -170,17 +181,15 @@ export default {
     z-index: 99
     width: 100%
     margin-top: -60px
-    -webkit-transition: margin-top .3s linear
     transition: margin-top .3s linear
-    -webkit-box-shadow: none
     box-shadow: none
+
     &.nav_fix
       position: fixed
       top: 0
-      background: #fff
       margin-top: 0
       border-bottom: 1px solid #e0e0e0
-      -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.07)
+      background: #fff
       box-shadow: 0 5px 5px rgba(0,0,0,.07)
 
     .nav-bar
@@ -189,29 +198,37 @@ export default {
       width: 100%
       margin-top: 0
       color: #616161
+
       .container
-        height: 100%
         @include flex()
+        height: 100%
+
         h2
+          line-height: 60px
           font-size: 18px
           font-weight: 400
-          line-height: 60px
           color: #424242
+
         .con
           .right
             display: flex
+
             a
               color: #616161
+
               &:hover
                 color: $colorA
+
               &.current
                 color: $colorA
+
             .now
               width: 118px
               height: 28px
-              font-size: 12px
               line-height: 28px
+              font-size: 12px
               cursor: pointer
+
               &:hover
                 color: $colorG
 </style>

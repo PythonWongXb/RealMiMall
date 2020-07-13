@@ -25,7 +25,7 @@
               <div class="good-box fl">
                 <div class="good-list" v-for="(item,i) in order.orderItemVoList" :key="i">
                   <div class="good-img">
-                    <img v-lazy="item.productImage" alt />
+                    <img v-lazy="item.productImage" />
                   </div>
                   <div class="good-name">
                     <div class="p-name">{{item.productName}}</div>
@@ -59,7 +59,7 @@
             infinite-scroll-disabled="busy"
             infinite-scroll-distance="0"
           >
-            <img src="/imgs/loading-svg/loading-spinning-bubbles.svg" alt v-show="loading" />
+            <img src="/imgs/loading-svg/loading-spinning-bubbles.svg" v-show="loading" />
           </div>
           <no-data v-if="!loading && list.length==0"></no-data>
         </div>
