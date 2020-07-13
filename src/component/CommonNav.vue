@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:31:37
- * @LastEditTime: 2020-07-12 22:55:41
+ * @LastEditTime: 2020-07-13 15:33:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/CommonNav.vue
@@ -71,7 +71,7 @@
                 />
                 <div class="name">{{ item.productName }}</div>
                 <div class="price">{{ item.productPrice }}</div>
-                <div class="num">X {{ item.quantity }}</div>
+                <div class="num">X{{ item.quantity }}</div>
                 <i class='icon-icon-test1' @click="delProduct(item.productId)"></i>
               </div>
               <div  v-if="cartCount !== 0" class="all-money">
@@ -295,7 +295,12 @@ export default {
             .each
               @include flex()
               padding: 5px 10px
+              justify-content: flex-start
+              &:hover
+                i
+                  display: block
               i
+                display: none
                 &:hover
                   color: red
               img
@@ -307,4 +312,8 @@ export default {
                 text-overflow:ellipsis
                 white-space: nowrap
                 text-align: left
+              .price
+                width: 50px
+              .num
+                width: 50px
 </style>

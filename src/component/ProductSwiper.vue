@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-10 23:18:27
- * @LastEditTime: 2020-07-13 10:16:54
+ * @LastEditTime: 2020-07-13 15:12:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/ProductSwiper.vue
@@ -40,6 +40,7 @@ export default {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
+        effect: 'slide',
         pagination: {
           el: '.swiper-pagination',
           clickable: true
