@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:53:27
- * @LastEditTime: 2020-07-13 10:24:33
+ * @LastEditTime: 2020-07-13 16:43:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/index.vue
@@ -25,7 +25,9 @@
         </div>
       </div>
     </div>
-    <Banner></Banner>
+    <Banner
+    :adList="adList"
+    ></Banner>
     <flash-buy></flash-buy>
     <banner-adv
     :src="BanneradvList[0]"
@@ -102,6 +104,11 @@ export default {
   },
   data () {
     return {
+      adList: [
+        { img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d158f243b54d5ec68dd2ac72bd24555d.jpg?w=632&h=340' },
+        { img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fbff319c7dd00e75c9758acf248d3784.jpg?w=632&h=340' },
+        { img: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/816a66edef10673b4768128b41804cae.jpg?w=632&h=340' }
+      ],
       index: 0,
       showSlide: '',
       reverse: false,

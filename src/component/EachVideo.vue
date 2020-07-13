@@ -51,7 +51,7 @@ export default {
   transition: transform .5s
   cursor: pointer
   &:nth-child(4n)
-    margin-right: 0px
+    margin-right: 0
   &:hover
     transform: translateY(-5px)
     @include shadow()

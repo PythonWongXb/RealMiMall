@@ -57,7 +57,7 @@ export default {
     left: 0
     right: 0
     bottom: 0
-    opacity: 0.6
+    opacity: .6
     background-color: #000000
 
   .item-wrap

@@ -156,7 +156,7 @@ export default {
           this.$refs.cartBox.style.height = `${s}px`
         }
       } else {
-        this.$refs.cartBox.style.height = '0px'
+        this.$refs.cartBox.style.height = '0'
       }
     },
     delProduct (index) {
@@ -240,7 +240,7 @@ export default {
           background: $colorG
           color: $colorL
           position: absolute
-          height: 0px
+          height: 0
           width:316px
           right: 0
           text-align: center

@@ -393,7 +393,7 @@ export default {
         .swiper-button-next
           position: absolute
           top: -30px
-          right: 0px
+          right: 0
           left: auto
           border: none
           height: 24px

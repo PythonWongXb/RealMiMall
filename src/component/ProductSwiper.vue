@@ -84,7 +84,7 @@ export default {
     .swiper-button-next,
     .swiper-button-prev
       &:hover
-        background: rgba(0, 0, 0, .5)
+        background: rgba(0,0,0,.5)
       width: 41px
       height: 69px
     .swiper-button-next::after,

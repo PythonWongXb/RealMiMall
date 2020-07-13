@@ -151,7 +151,7 @@ export default {
             transition-property: height opacity
             transition-duration: .5s
             background: $colorG
-            height: 0px
+            height: 0
             width: 100%
             left: 0
             top: 140px

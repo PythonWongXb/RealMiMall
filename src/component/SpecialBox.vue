@@ -93,7 +93,7 @@ export default {
     height: calc( 50% - 7px )
     background-color: $colorG
     @include flex()
-    padding: 0px 30px 0 30px
+    padding: 0 30px 0 30px
     .title
       font-size: 18px
       color: #333

@@ -5,7 +5,7 @@
   .mask {
     @include position(fixed);
     background-color: $colorI;
-    opacity: 0.5;
+    opacity: .5;
   }
 
   &.slide-enter-active {

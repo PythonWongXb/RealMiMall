@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 11:57:30
- * @LastEditTime: 2020-07-10 22:19:52
+ * @LastEditTime: 2020-07-13 16:41:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/views/Cart.vue
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import CartMain from '../component/cartMain'
+import CartMain from '../component/CartMain'
 
 export default {
   name: 'cart',

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-06 15:38:38
- * @LastEditTime: 2020-07-10 22:10:24
+ * @LastEditTime: 2020-07-13 16:56:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/UserIndex.vue
@@ -63,7 +63,7 @@ export default {
   &:hover
     .bottom
       height: 164px
-      box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.15)
+      box-shadow: 1px 3px 3px rgba(0,0,0,.15)
       opacity: 1
   .top
     @include flex()
@@ -85,11 +85,11 @@ export default {
     opacity: 0
     color: $colorL
     top: 100%
-    height: 0px
+    height: 0
     width: 110px
     background: $colorG
     transition: all .4s
-    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.15)
+    box-shadow: 1px 0 3px rgba(0,0,0,.15)
     overflow: hidden
     .bottom-box
       padding: 7px 0
