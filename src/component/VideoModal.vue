@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-09 11:37:23
- * @LastEditTime: 2020-07-13 21:04:08
+ * @LastEditTime: 2020-07-14 09:42:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /realmimall/src/component/VideoModal.vue
@@ -13,7 +13,7 @@
       v-if="showSlideComputed === 'slideDown'"
       @click="closeVideo"
       ></div>
-      <div class="video">
+      <div class="video" :class="showSlideComputed">
         <div class="close-icon iconfont" @click="closeVideo">{{ title }}</div>
         <video controls="controls" autoplay :src="src"></video>
       </div>
@@ -76,18 +76,20 @@ export default {
 
     @keyframes slideDown
       from
-      top: -50%
+        top: -50%
         opacity: 0
+
       to
-      top: 50%
+        top: 50%
         opacity: 1
 
     @keyframes slideUp
       from
-      top: 50%
+        top: 50%
         opacity: 1
+
       to
-      top: -50%
+        top: -50%
         opacity: 0
 
     .video
